@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from anam.co/webrtc-simplified-part1/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 26 Jan 2022 09:53:23 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>The curious world of web RTC (Part 1: Introduction)</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="../assets/built/screen4124.css?v=cfe2113eef" />
+
+    <link rel="shortcut icon" href="../favicon.png" type="image/png" />
+    <link rel="canonical" href="https://blog.anam.co/webrtc-simplified-part1/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <link rel="amphtml" href="https://blog.anam.co/webrtc-simplified-part1/amp/" />
+    
+    <meta property="og:site_name" content="Anam&#x27;s Blog" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="The curious world of web RTC (Part 1: Introduction)" />
+    <meta property="og:description" content="This is part 1 of my WebRTC series: Read Part 2 here: The curious world of web RTC (Part 2: Servers)I believed webRTC is one of the coolest things that happened to the web. It almost gave web developers super power to do the impossible. With that being said," />
+    <meta property="og:url" content="https://blog.anam.co/webrtc-simplified-part1/" />
+    <meta property="og:image" content="https://images.unsplash.com/uploads/1413222992504f1b734a6/1928e537?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjExNzczfQ" />
+    <meta property="article:published_time" content="2019-04-10T12:05:52.000Z" />
+    <meta property="article:modified_time" content="2019-04-11T11:47:40.000Z" />
+    <meta property="article:tag" content="english" />
+    <meta property="article:tag" content="webrtc" />
+    <meta property="article:tag" content="rtc" />
+    <meta property="article:tag" content="audio" />
+    <meta property="article:tag" content="video" />
+    <meta property="article:tag" content="socket" />
+    <meta property="article:tag" content="websocket" />
+    
+    <meta property="article:publisher" content="https://www.facebook.com/theanam" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="The curious world of web RTC (Part 1: Introduction)" />
+    <meta name="twitter:description" content="This is part 1 of my WebRTC series: Read Part 2 here: The curious world of web RTC (Part 2: Servers)I believed webRTC is one of the coolest things that happened to the web. It almost gave web developers super power to do the impossible. With that being said," />
+    <meta name="twitter:url" content="https://blog.anam.co/webrtc-simplified-part1/" />
+    <meta name="twitter:image" content="https://images.unsplash.com/uploads/1413222992504f1b734a6/1928e537?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjExNzczfQ" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Anam Ahmed" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="english, webrtc, rtc, audio, video, socket, websocket" />
+    <meta name="twitter:site" content="@mranam" />
+    <meta property="og:image:width" content="1080" />
+    <meta property="og:image:height" content="720" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Anam&#x27;s Blog",
+        "logo": "https://blog.anam.co/content/images/2018/06/bloglogo-1.png"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Anam Ahmed",
+        "image": {
+            "@type": "ImageObject",
+            "url": "//www.gravatar.com/avatar/768b02b94182c64b0cc4bbeedcca49f9?s=250&d=mm&r=x",
+            "width": 250,
+            "height": 250
+        },
+        "url": "https://blog.anam.co/author/anam/",
+        "sameAs": []
+    },
+    "headline": "The curious world of web RTC (Part 1: Introduction)",
+    "url": "https://blog.anam.co/webrtc-simplified-part1/",
+    "datePublished": "2019-04-10T12:05:52.000Z",
+    "dateModified": "2019-04-11T11:47:40.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://images.unsplash.com/uploads/1413222992504f1b734a6/1928e537?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ",
+        "width": 1080,
+        "height": 720
+    },
+    "keywords": "english, webrtc, rtc, audio, video, socket, websocket",
+    "description": "This is part 1 of my WebRTC series: Read Part 2 here: The curious world of web RTC (Part 2: Servers)I believed webRTC is one of the coolest things that happened to the web. It almost gave web developers super power to do the impossible. With that being said,",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.anam.co/"
+    }
+}
+    </script>
+
+    <script src="../public/ghost-sdk.min4124.js?v=cfe2113eef"></script>
+<script>
+ghost.init({
+	clientId: "ghost-frontend",
+	clientSecret: "105460a4bc06"
+});
+</script>
+    <meta name="generator" content="Ghost 2.28" />
+    <link rel="alternate" type="application/rss+xml" title="Anam&#x27;s Blog" href="https://blog.anam.co/rss/" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-9646061-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-9646061-2');
+</script>
+
+</head>
+<body class="post-template tag-english tag-webrtc tag-rtc tag-audio tag-video tag-socket tag-websocket">
+
+    <div class="site-wrapper">
+
+        
+
+<header class="site-header outer">
+    <div class="inner">
+        <nav class="site-nav">
+    <div class="site-nav-left">
+                <a class="site-nav-logo" href="https://blog.anam.co/"><img src="../content/images/2018/06/bloglogo-1.png" alt="Anam&#x27;s Blog" /></a>
+            <ul class="nav" role="menu">
+    <li class="nav-home" role="menuitem"><a href="https://blog.anam.co/">Home</a></li>
+    <li class="nav-linux" role="menuitem"><a href="https://blog.anam.co/tag/linux/">Linux</a></li>
+    <li class="nav-containers" role="menuitem"><a href="https://blog.anam.co/tag/docker/">Containers</a></li>
+    <li class="nav-baanlaa" role="menuitem"><a href="https://blog.anam.co/tag/bangla-2/">বাংলা</a></li>
+    <li class="nav-my-github" role="menuitem"><a href="https://github.com/theanam/">My Github</a></li>
+    <li class="nav-my-linkedin" role="menuitem"><a href="https://linkedin.com/in/theanam/">My Linkedin</a></li>
+</ul>
+
+    </div>
+    <div class="site-nav-right">
+        <div class="social-links">
+                <a class="social-link social-link-fb" href="https://www.facebook.com/theanam" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+</a>
+                <a class="social-link social-link-tw" href="https://twitter.com/mranam" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+</a>
+        </div>
+            <a class="rss-button" href="https://feedly.com/i/subscription/feed/https://blog.anam.co/rss/" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="6.18" cy="17.82" r="2.18"/><path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/></svg>
+</a>
+    </div>
+</nav>
+    </div>
+</header>
+
+
+<main id="site-main" class="site-main outer">
+    <div class="inner">
+
+        <article class="post-full post tag-english tag-webrtc tag-rtc tag-audio tag-video tag-socket tag-websocket ">
+
+            <header class="post-full-header">
+                <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime="2019-04-10">10 April 2019</time>
+                        <span class="date-divider">/</span> <a href="../tag/english/index.html">english</a>
+                </section>
+                <h1 class="post-full-title">The curious world of web RTC (Part 1: Introduction)</h1>
+            </header>
+
+            <figure class="post-full-image" style="background-image: url(https://images.unsplash.com/uploads/1413222992504f1b734a6/1928e537?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjExNzczfQ)">
+            </figure>
+
+            <section class="post-full-content">
+                <div class="post-content">
+                    <p>This is part 1 of my WebRTC series: </p><p><strong>Read Part 2 here:</strong> <a href="https://blog.anam.co/webrtc-simplified-part2/">The curious world of web RTC (Part 2: Servers)</a></p><p>I believed webRTC is one of the coolest things that happened to the web. It almost gave web developers super power to do the impossible. With that being said, The standards and implementation is a very different story. In this series of blog I will try to simplify webRTC from all the experience I gathered by building many WebRTC application, facing troubles, and learning along the way.</p><p>For those who are completely new to the concept of webRTC, WebRTC is the way to enable real time communication in the browser. The standards, Codecs, and tools are built into the browser itself, so no plugin is needed to do tasks like accessing the webcam, Microphone, Or create peer to peer connection to another browser or device that supports webRTC. The standards of WebRTC is directly picked from similar standards from the telecommunication industry, So integration and interchange is highly possible between different communication medium.</p><p><strong>What's Included? </strong></p><ol><li>API to access camera. For desktop computer and laptops, It's the webcam, For phones and tablets it's the device camera. It supports advanced features like preferred camera (in case there are multiple), Video size, bitrate, etc. Not all the features are widely supported. But at this point, most of the devices ship with basic support.  The direct feed from the camera can be accessed, what to do with it, depends on the developer 😉</li><li>Ability to access the microphone. Like video, it also supports many options and multiple devices, and device support varies. It can be used to record or transmit audio from the browser. </li><li>Ability to Look up media devices connected to the computer. And check every supported option available. </li><li>Mechanism to create Peer to Peer connection to another browser, or another device that supports same protocol. Once connected, the peer to peer connection can be used to stream video, audio or any arbitrary data, files directly from one computer to another without the need for a server*</li><li>Some browsers support screen capture and other cool (but very limited support) features, that might end up in other browsers soon. But for now, we will talk about the better supported features. </li></ol><p>*Server is needed for initial connection establishment and signalling. </p><p><strong>Wait, what? So does that mean any website can watch or hear me at any time?</strong></p><p>No. They can't. Until you give permission. WebRTC application requires your permission to access your camera and microphone. Every time any application calls the <code>getUserMedia</code> function (that is used to access camera and microphone), a popup appears asking for permission. You have the option to deny, permanently allow, or allow and let it ask every time it tires to access the hardware.  </p><figure class="kg-image-card"><img src="../content/images/2019/04/Screenshot-2019-04-10-at-5.43.03-PM.png" class="kg-image"><figcaption>The Google chrome prompt looks like this</figcaption></figure><p><strong>Ok, now what about security? If a malicious website pretends to be something else and tries to access my camera or microphone? Do I need to encrypt the data before transmission?</strong></p><p> The good news is, Only web application with secure origin can utilise webRTC. So any web app that's served from <code>localhost</code> or serverd with a valid SSL certificate are allowed to access webRTC API. WebRTC communication implements <a href="https://en.wikipedia.org/wiki/Datagram_Transport_Layer_Security">DTLS</a> and <a href="https://en.wikipedia.org/wiki/Secure_Real-time_Transport_Protocol">SRTP</a> protocols. Unless the developer of the web application is intentionally or unintentionally willing to exploit the data, the user is quite safe. </p><p><strong>How is this series organised?</strong></p><p>This post was the introduction to a series of Posts on webRTC. In these posts we will explore some of the API from webRTC, then talk about the server involvement, including the TURN and STUN servers and explore what it takes to create a signalling server. We will explore webRTC data flow and later will talk about data channels. </p><p>If anything else needs to be discussed or I missed something, please let me know in the comments.</p>
+                </div>
+            </section>
+            <section class="disqus-comments post-full-content">
+                <style>
+                    .disqus-comments.post-full-content::before {
+                        display: none;
+                    }
+            
+                    .disqus-comments.post-full-content::after {
+                        display: none;
+                    }
+                </style>
+            
+                <div id="disqus_thread"></div>
+                <script>
+
+                    /**
+                    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+                    var disqus_config = function () {
+                        //this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                        this.page.identifier = "ghost-5cadaa58d2cdca0001913a63"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    };
+                    (function () { // DON'T EDIT BELOW THIS LINE
+                        var d = document, s = d.createElement('script');
+                        s.src = '../../anamsblog.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the
+                    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+                </noscript>
+            </section>
+
+            <footer class="post-full-footer">
+
+
+                    
+<section class="author-card">
+        <img class="author-profile-image" src="http://www.gravatar.com/avatar/768b02b94182c64b0cc4bbeedcca49f9?s=250&amp;d=mm&amp;r=x" alt="Anam Ahmed" />
+    <section class="author-card-content">
+        <h4 class="author-card-name"><a href="../author/anam/index.html">Anam Ahmed</a></h4>
+            <p>Read <a href="../author/anam/index.html">more posts</a> by this author.</p>
+    </section>
+</section>
+<div class="post-full-footer-right">
+    <a class="author-card-button" href="../author/anam/index.html">Read More</a>
+</div>
+
+
+            </footer>
+
+
+        </article>
+
+    </div>
+</main>
+
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+                <article class="read-next-card"
+                            style="background-image: url(../../casper.ghost.org/v1.0.0/images/blog-cover.jpg)"
+                >
+                    <header class="read-next-card-header">
+                        <small class="read-next-card-header-sitetitle">&mdash; Anam&#x27;s Blog &mdash;</small>
+                        <h3 class="read-next-card-header-title"><a href="../tag/english/index.html">english</a></h3>
+                    </header>
+                    <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
+</div>
+                    <div class="read-next-card-content">
+                        <ul>
+                            <li><a href="../how-to-conduct-coding-interviews/index.html">How to conduct Coding interviews</a></li>
+                            <li><a href="../webrtc-simplified-part2/index.html">The curious world of web RTC (Part 2: Servers)</a></li>
+                            <li><a href="../one-of-the-biggest-scaling-challenges-in-my-career/index.html">How I solved an interesting Scaling problem.</a></li>
+                        </ul>
+                    </div>
+                    <footer class="read-next-card-footer">
+                        <a href="../tag/english/index.html">See all 29 posts →</a>
+                    </footer>
+                </article>
+
+                <article class="post-card post tag-webrtc tag-rtc tag-audio tag-video tag-socket tag-websocket tag-english">
+        <a class="post-card-image-link" href="../webrtc-simplified-part2/index.html">
+            <div class="post-card-image" style="background-image: url(https://images.unsplash.com/photo-1544197150-b99a580bb7a8?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjExNzczfQ)"></div>
+        </a>
+    <div class="post-card-content">
+        <a class="post-card-content-link" href="../webrtc-simplified-part2/index.html">
+            <header class="post-card-header">
+                    <span class="post-card-tags">webrtc</span>
+                <h2 class="post-card-title">The curious world of web RTC (Part 2: Servers)</h2>
+            </header>
+            <section class="post-card-excerpt">
+                <p>This is part 2 of my series on webRTC.Read Part 1 here: The curious world of web RTC (Part 1: Introduction)Let's talk servers. Of all the webRTC articles I read, all</p>
+            </section>
+        </a>
+        <footer class="post-card-meta">
+
+            <ul class="author-list">
+                <li class="author-list-item">
+
+                    <div class="author-name-tooltip">
+                        Anam Ahmed
+                    </div>
+
+                        <a href="../author/anam/index.html" class="static-avatar"><img class="author-profile-image" src="http://www.gravatar.com/avatar/768b02b94182c64b0cc4bbeedcca49f9?s=250&amp;d=mm&amp;r=x" alt="Anam Ahmed" /></a>
+                </li>
+            </ul>
+
+            <span class="reading-time">4 min read</span>
+
+        </footer>
+    </div>
+</article>
+
+                <article class="post-card post tag-bangla tag-bangla-2 tag-travel tag-story tag-india">
+        <a class="post-card-image-link" href="../chennai-tour-blog/index.html">
+            <div class="post-card-image" style="background-image: url(../content/images/2019/04/IMG_20190303_133003.jpg)"></div>
+        </a>
+    <div class="post-card-content">
+        <a class="post-card-content-link" href="../chennai-tour-blog/index.html">
+            <header class="post-card-header">
+                    <span class="post-card-tags">bangla</span>
+                <h2 class="post-card-title">ভারতের চেন্নাই ভ্রমন ,আমার অভিজ্ঞতা ও ফটোব্লগ</h2>
+            </header>
+            <section class="post-card-excerpt">
+                <p>আমার প্রথমবার ভারত যাওয়া হয়েছে ২০১৯ সালের ফেব্রুয়ারীতে। ব্লগ লেখার দিন থেকে খুব বেশী</p>
+            </section>
+        </a>
+        <footer class="post-card-meta">
+
+            <ul class="author-list">
+                <li class="author-list-item">
+
+                    <div class="author-name-tooltip">
+                        Anam Ahmed
+                    </div>
+
+                        <a href="../author/anam/index.html" class="static-avatar"><img class="author-profile-image" src="http://www.gravatar.com/avatar/768b02b94182c64b0cc4bbeedcca49f9?s=250&amp;d=mm&amp;r=x" alt="Anam Ahmed" /></a>
+                </li>
+            </ul>
+
+            <span class="reading-time">1 min read</span>
+
+        </footer>
+    </div>
+</article>
+
+        </div>
+    </div>
+</aside>
+
+<div class="floating-header">
+    <div class="floating-header-logo">
+        <a href="https://blog.anam.co/">
+                <img src="../content/images/2018/06/blogfav-1.png" alt="Anam&#x27;s Blog icon" />
+            <span>Anam&#x27;s Blog</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">The curious world of web RTC (Part 1: Introduction)</div>
+    <div class="floating-header-share">
+        <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
+</svg>
+</div>
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=The%20curious%20world%20of%20web%20RTC%20(Part%201%3A%20Introduction)&amp;url=https://blog.anam.co/webrtc-simplified-part1/"
+            onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+        </a>
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.anam.co/webrtc-simplified-part1/"
+            onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+        </a>
+    </div>
+    <progress id="reading-progress" class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+
+
+
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="https://blog.anam.co/">Anam&#x27;s Blog</a> &copy; 2022</section>
+                <nav class="site-footer-nav">
+                    <a href="https://blog.anam.co/">Latest Posts</a>
+                    <a href="https://www.facebook.com/theanam" target="_blank" rel="noopener">Facebook</a>
+                    <a href="https://twitter.com/mranam" target="_blank" rel="noopener">Twitter</a>
+                    <a href="https://ghost.org/" target="_blank" rel="noopener">Ghost</a>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+
+    <script
+        src="../../code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="../assets/js/jquery.fitvids4124.js?v=cfe2113eef"></script>
+
+
+    <script>
+
+// NOTE: Scroll performance is poor in Safari
+// - this appears to be due to the events firing much more slowly in Safari.
+//   Dropping the scroll event and using only a raf loop results in smoother
+//   scrolling but continuous processing even when not scrolling
+$(document).ready(function () {
+    // Start fitVids
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    // End fitVids
+
+    var progressBar = document.querySelector('#reading-progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        // show/hide floating header
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+
+});
+</script>
+
+
+    
+
+</body>
+
+<!-- Mirrored from anam.co/webrtc-simplified-part1/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 26 Jan 2022 09:53:24 GMT -->
+</html>

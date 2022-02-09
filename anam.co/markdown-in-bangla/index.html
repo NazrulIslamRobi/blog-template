@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from anam.co/markdown-in-bangla/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 26 Jan 2022 09:53:39 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>মার্কডাউন কি এবং কেন?</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="../assets/built/screen4124.css?v=cfe2113eef" />
+
+    <link rel="shortcut icon" href="../favicon.png" type="image/png" />
+    <link rel="canonical" href="https://blog.anam.co/markdown-in-bangla/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <link rel="amphtml" href="https://blog.anam.co/markdown-in-bangla/amp/" />
+    
+    <meta property="og:site_name" content="Anam&#x27;s Blog" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="মার্কডাউন কি এবং কেন?" />
+    <meta property="og:description" content="মার্কডাউন জিনিসটা বেশ চমতকার। আপনার ডকুমেন্টেশনের কাজকে বেশ সহজ করে দিবে, আপনি যে জিনিসটা সময় নিয়ে ফরম্যটিং করতেন, সেটা আপনি প্লেইন টেক্সট হিসে" />
+    <meta property="og:url" content="https://blog.anam.co/markdown-in-bangla/" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1519120443186-4620c77c7130?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjExNzczfQ&amp;s=461cfce8090a9cc932e4337ac8ff2fef" />
+    <meta property="article:published_time" content="2013-10-17T00:05:00.000Z" />
+    <meta property="article:modified_time" content="2018-09-11T21:20:11.000Z" />
+    <meta property="article:tag" content="markdown" />
+    <meta property="article:tag" content="বাংলা" />
+    <meta property="article:tag" content="bangla" />
+    
+    <meta property="article:publisher" content="https://www.facebook.com/theanam" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="মার্কডাউন কি এবং কেন?" />
+    <meta name="twitter:description" content="মার্কডাউন জিনিসটা বেশ চমতকার। আপনার ডকুমেন্টেশনের কাজকে বেশ সহজ করে দিবে, আপনি যে জিনিসটা সময় নিয়ে ফরম্যটিং করতেন, সেটা আপনি প্লেইন টেক্সট হিসে" />
+    <meta name="twitter:url" content="https://blog.anam.co/markdown-in-bangla/" />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1519120443186-4620c77c7130?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjExNzczfQ&amp;s=461cfce8090a9cc932e4337ac8ff2fef" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Anam Ahmed" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="markdown, বাংলা, bangla" />
+    <meta name="twitter:site" content="@mranam" />
+    <meta property="og:image:width" content="1080" />
+    <meta property="og:image:height" content="752" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Anam&#x27;s Blog",
+        "logo": "https://blog.anam.co/content/images/2018/06/bloglogo-1.png"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Anam Ahmed",
+        "image": {
+            "@type": "ImageObject",
+            "url": "//www.gravatar.com/avatar/768b02b94182c64b0cc4bbeedcca49f9?s=250&d=mm&r=x",
+            "width": 250,
+            "height": 250
+        },
+        "url": "https://blog.anam.co/author/anam/",
+        "sameAs": []
+    },
+    "headline": "মার্কডাউন কি এবং কেন?",
+    "url": "https://blog.anam.co/markdown-in-bangla/",
+    "datePublished": "2013-10-17T00:05:00.000Z",
+    "dateModified": "2018-09-11T21:20:11.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://images.unsplash.com/photo-1519120443186-4620c77c7130?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ&s=461cfce8090a9cc932e4337ac8ff2fef",
+        "width": 1080,
+        "height": 752
+    },
+    "keywords": "markdown, বাংলা, bangla",
+    "description": "মার্কডাউন জিনিসটা বেশ চমতকার। আপনার ডকুমেন্টেশনের কাজকে বেশ সহজ করে দিবে, আপনি যে জিনিসটা সময় নিয়ে ফরম্যটিং করতেন, সেটা আপনি প্লেইন টেক্সট হিসে",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.anam.co/"
+    }
+}
+    </script>
+
+    <script src="../public/ghost-sdk.min4124.js?v=cfe2113eef"></script>
+<script>
+ghost.init({
+	clientId: "ghost-frontend",
+	clientSecret: "105460a4bc06"
+});
+</script>
+    <meta name="generator" content="Ghost 2.28" />
+    <link rel="alternate" type="application/rss+xml" title="Anam&#x27;s Blog" href="https://blog.anam.co/rss/" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-9646061-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-9646061-2');
+</script>
+
+</head>
+<body class="post-template tag-markdown tag-bangla-2 tag-bangla">
+
+    <div class="site-wrapper">
+
+        
+
+<header class="site-header outer">
+    <div class="inner">
+        <nav class="site-nav">
+    <div class="site-nav-left">
+                <a class="site-nav-logo" href="https://blog.anam.co/"><img src="../content/images/2018/06/bloglogo-1.png" alt="Anam&#x27;s Blog" /></a>
+            <ul class="nav" role="menu">
+    <li class="nav-home" role="menuitem"><a href="https://blog.anam.co/">Home</a></li>
+    <li class="nav-linux" role="menuitem"><a href="https://blog.anam.co/tag/linux/">Linux</a></li>
+    <li class="nav-containers" role="menuitem"><a href="https://blog.anam.co/tag/docker/">Containers</a></li>
+    <li class="nav-baanlaa" role="menuitem"><a href="https://blog.anam.co/tag/bangla-2/">বাংলা</a></li>
+    <li class="nav-my-github" role="menuitem"><a href="https://github.com/theanam/">My Github</a></li>
+    <li class="nav-my-linkedin" role="menuitem"><a href="https://linkedin.com/in/theanam/">My Linkedin</a></li>
+</ul>
+
+    </div>
+    <div class="site-nav-right">
+        <div class="social-links">
+                <a class="social-link social-link-fb" href="https://www.facebook.com/theanam" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+</a>
+                <a class="social-link social-link-tw" href="https://twitter.com/mranam" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+</a>
+        </div>
+            <a class="rss-button" href="https://feedly.com/i/subscription/feed/https://blog.anam.co/rss/" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="6.18" cy="17.82" r="2.18"/><path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/></svg>
+</a>
+    </div>
+</nav>
+    </div>
+</header>
+
+
+<main id="site-main" class="site-main outer">
+    <div class="inner">
+
+        <article class="post-full post tag-markdown tag-bangla-2 tag-bangla ">
+
+            <header class="post-full-header">
+                <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime="2013-10-17">17 October 2013</time>
+                        <span class="date-divider">/</span> <a href="../tag/markdown/index.html">markdown</a>
+                </section>
+                <h1 class="post-full-title">মার্কডাউন কি এবং কেন?</h1>
+            </header>
+
+            <figure class="post-full-image" style="background-image: url(https://images.unsplash.com/photo-1519120443186-4620c77c7130?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjExNzczfQ&amp;s=461cfce8090a9cc932e4337ac8ff2fef)">
+            </figure>
+
+            <section class="post-full-content">
+                <div class="post-content">
+                    <p>মার্কডাউন জিনিসটা বেশ চমতকার। আপনার ডকুমেন্টেশনের কাজকে বেশ সহজ করে দিবে, আপনি যে জিনিসটা সময় নিয়ে ফরম্যটিং করতেন, সেটা আপনি প্লেইন টেক্সট হিসেবে লিখবেন এবং মার্কডাউন সেটা আপনাকে ফরম্যটিং করে দিবে।</p>
+<p><strong>তো মার্কডাউন জিনিসটা আসলে কি?</strong></p>
+<p>মার্কডাউন এক ধরনের টেক্সট ফরম্যট।আমরা যখন কোন ডকুমেন্ট লিখি তখন আমাদের আলাদা আলাদা ধরনের উপাদান দরকার হয়, কোন লেখা <strong>বোল্ড</strong> করতে হতে পারে, কোনটা <em>ইটালিক</em> করতে হতে পারে।হেডিং দিতে হতে পারে, লিস্ট তৈরী করতে হতে পারে, ছবি দিতে হতে পারে, আরও নানাকিছু, আপনি আপনার প্রিয় ওয়ার্ড প্রোসেসর দিয়েই তো করতে পারেন? তাইলে মার্কডাউন কেন? এটা বুঝতে পারবেন যখন আপনি জানবেন মার্কডাউন কাদের জন্য ।</p>
+<p><strong>মার্কডাউন কাদের জন্য ?</strong></p>
+<p>আপনার যদি ডকুমেন্ট লিখতে আলসেমী লাগে, অথবা অনেক বড় ডকুমেন্ট লিখতে হয়, আপনি যদি মাউসের চেয়ে কীবোর্ডে সবকিছু করতে বেশী স্বাচ্ছন্দ বোধ করেন, আপনার কাছে যদি আপনার প্রিয় ডকুমেন্ট ইডিটর না থাকে, আপনার যদি কোন ডকুমেন্ট ইডিটর ব্যবহারে বিশেষ এলার্জি থাকে, অথবা আপনি যদি সবকিছুই আপনার প্রিয় কোড ইডিটরে লিখতে চান,তাইলে এখনই মার্কডাউনের ছায়ায় আসুন।</p>
+<p><strong>কোথায় লিখবেন?</strong></p>
+<p>মার্কডাউন আপনি আপনার প্রিয় টেক্সট ইডিটরেইলিখতে পারেন, সাব্লাইম, notepad++,হাবিজাবি সবগুলোতেই লেখা যাবে, মার্কডাউন ইন্টারপ্রেটর দিয়ে ফাইলটা আপনার পছন্দের ফরম্যটে ইন্টারপ্রেট করে নিতে পারেন। তবে সবচেয়ে ভালো হয় যদি আপনি একটা স্পেসিফিক মার্কডাউন ইডিটর ব্যবহার করেন। আমি গরীব মানুষ, লিনাক্স ব্যবহার করি, আমি ReText নামের একটা ইডিটর ব্যবহার করি, আপনিও আমার মত গরীব মানুষ হলে আপনারাও ব্যবহার করতে পারেন, উবুন্টু ব্যবহারকারীরা <a href="apt://retext">এখানে</a> ক্লিক করুন, অথবা টার্মিনালে লিখুন  <code>sudo apt-get install retext</code> অন্য ডিস্ট্রোুলোতে আছে কিনা জানিনা, আপনারা <a href="https://sourceforge.net/projects/retext/">এখানে থেকে</a> ডাউনলোড করে ব্যবহার করতে পারেন।<br>
+আপনি যদি ম্যক ব্যবহারকারী হন, আপনি <a href="http://mouapp.com/">Mou</a> ব্যবহার করতে পারেন। আর উইন্ডোজ ইউজার হলে <a href="http://markdownpad.com/">Markdownpad</a> ব্যবহার করতে পারেন। পরের দুইটা এপ্লিকেশন আমি ব্যবহার করিনি, সার্চ করে দেখলাম বেশীভাগ ক্ষেত্রে এইগুলোরই নাম চোখে পড়ে।</p>
+<p><strong>সিনট্যক্স</strong></p>
+<p>আমার পোস্টের উদ্দেশ্য মার্কডাউন টিউটোরিয়াল নয়, সেটার জন্য অনেক আর্টিকেল আগেই লেখা হয়েছে, আমি কিছু সিন্ট্যক্স দেখাবো শুধু মার্কডাউন সম্পর্কে ধারনা দেয়ার জন্য :</p>
+<p>হেডলাইন : আপনি ছয় ধরনের হেডলাইন লিখতে পারেন,</p>
+<pre><code># heading 1
+## Heading 2
+### Heading 3
+#### Heading 4
+##### Heading 5
+###### Heading 6
+</code></pre>
+<p>এমনটা আপনাকে আউটপুট দিবে কিছুটা এরকম :</p>
+<h1 id="heading1">heading 1</h1>
+<h2 id="heading2">Heading 2</h2>
+<h3 id="heading3">Heading 3</h3>
+<h4 id="heading4">Heading 4</h4>
+<h5 id="heading5">Heading 5</h5>
+<h6 id="heading6">Heading 6</h6>
+<p>আপনি তৈরী করতে পারেন লিস্ট:</p>
+<pre><code>* Item 1
+* Item 2
+* Item 3
+</code></pre>
+<p>আউটপুট কিছুটা এমন হবে :</p>
+<ul>
+<li>Item 1</li>
+<li>Item 2</li>
+<li>Item 3</li>
+</ul>
+<p>আপনি <code>**Strong text**</code> লিখলে <strong>Strong Text</strong> পাবেন, আবার <code>*Italic text*</code> লিখলে পাবেন <em>italic text</em>, দিতে পারেন হাইপারলিংক,</p>
+<pre><code>[লিংকের লেখা](http://url)
+</code></pre>
+<p>দিতে পারেন ছবি:</p>
+<pre><code>![ছবির alt টেক্সট](http://ছবির_ইউ_আর_এল &quot;টাইটেল&quot;)
+</code></pre>
+<p>আরও অনেক কিছু আছে মার্কডাউনে, আপনি সবকিছু জানতে পারবেন <a href="https://daringfireball.net/projects/markdown/syntax">এখানে</a> থেকে</p>
+<h3 id="">সংযুক্তি :</h3>
+<ul>
+<li><a href="https://daringfireball.net/projects/markdown/">মার্কডাউনের অফিসিয়াল সাইট</a></li>
+<li><a href="http://webdesign.tutsplus.com/tutorials/workflow-tutorials/quick-and-easy-documentation-using-markdown/">মার্কডাউন টিউটোরিয়াল</a></li>
+<li><a href="http://blog.lib.umn.edu/crosb002/leadership/Markdown_Cheat_Sheet.pdf">মার্কডাউন রেফারেন্স শীট</a></li>
+<li><a href="https://dillinger.io/">ওয়েব ভিত্তিক মার্কডাউন ইডিটর</a></li>
+</ul>
+
+                </div>
+            </section>
+            <section class="disqus-comments post-full-content">
+                <style>
+                    .disqus-comments.post-full-content::before {
+                        display: none;
+                    }
+            
+                    .disqus-comments.post-full-content::after {
+                        display: none;
+                    }
+                </style>
+            
+                <div id="disqus_thread"></div>
+                <script>
+
+                    /**
+                    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+                    var disqus_config = function () {
+                        //this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                        this.page.identifier = "ghost-5b30318a2477490001b5ed94"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    };
+                    (function () { // DON'T EDIT BELOW THIS LINE
+                        var d = document, s = d.createElement('script');
+                        s.src = '../../anamsblog.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the
+                    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+                </noscript>
+            </section>
+
+            <footer class="post-full-footer">
+
+
+                    
+<section class="author-card">
+        <img class="author-profile-image" src="http://www.gravatar.com/avatar/768b02b94182c64b0cc4bbeedcca49f9?s=250&amp;d=mm&amp;r=x" alt="Anam Ahmed" />
+    <section class="author-card-content">
+        <h4 class="author-card-name"><a href="../author/anam/index.html">Anam Ahmed</a></h4>
+            <p>Read <a href="../author/anam/index.html">more posts</a> by this author.</p>
+    </section>
+</section>
+<div class="post-full-footer-right">
+    <a class="author-card-button" href="../author/anam/index.html">Read More</a>
+</div>
+
+
+            </footer>
+
+
+        </article>
+
+    </div>
+</main>
+
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+
+                <article class="post-card post tag-firefox tag-webfont tag-english">
+        <a class="post-card-image-link" href="../fix-google-webfont-problem-in-firefox-old/index.html">
+            <div class="post-card-image" style="background-image: url(https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjExNzczfQ&amp;s=fc38317189602f38442f15d187418566)"></div>
+        </a>
+    <div class="post-card-content">
+        <a class="post-card-content-link" href="../fix-google-webfont-problem-in-firefox-old/index.html">
+            <header class="post-card-header">
+                    <span class="post-card-tags">firefox</span>
+                <h2 class="post-card-title">Fix Google Webfont problem in firefox (Old)</h2>
+            </header>
+            <section class="post-card-excerpt">
+                <p>Firefox fixed this bug, this method is not required any more. You probably have noticed that Google Webfont doesn't seem to work with the latest version of Firefox. Feeling worried? well there's a</p>
+            </section>
+        </a>
+        <footer class="post-card-meta">
+
+            <ul class="author-list">
+                <li class="author-list-item">
+
+                    <div class="author-name-tooltip">
+                        Anam Ahmed
+                    </div>
+
+                        <a href="../author/anam/index.html" class="static-avatar"><img class="author-profile-image" src="http://www.gravatar.com/avatar/768b02b94182c64b0cc4bbeedcca49f9?s=250&amp;d=mm&amp;r=x" alt="Anam Ahmed" /></a>
+                </li>
+            </ul>
+
+            <span class="reading-time">1 min read</span>
+
+        </footer>
+    </div>
+</article>
+
+                <article class="post-card post tag-ghost-tag tag-blogging tag-english">
+        <a class="post-card-image-link" href="../ghost-just-a-blogging-platform-full-of-awesomeness/index.html">
+            <div class="post-card-image" style="background-image: url(https://images.unsplash.com/photo-1487611459768-bd414656ea10?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjExNzczfQ&amp;s=cc8072c77540f66915f661e17d4b078f)"></div>
+        </a>
+    <div class="post-card-content">
+        <a class="post-card-content-link" href="../ghost-just-a-blogging-platform-full-of-awesomeness/index.html">
+            <header class="post-card-header">
+                    <span class="post-card-tags">ghost</span>
+                <h2 class="post-card-title">Ghost! Just a blogging platform, full of awesomeness</h2>
+            </header>
+            <section class="post-card-excerpt">
+                <p>Blogging is very popular now a days. And fortunately, there are lots of available tools for blogging. The first name that ever comes in your mind is mighty Wordpress, Since 2003, this amazing</p>
+            </section>
+        </a>
+        <footer class="post-card-meta">
+
+            <ul class="author-list">
+                <li class="author-list-item">
+
+                    <div class="author-name-tooltip">
+                        Anam Ahmed
+                    </div>
+
+                        <a href="../author/anam/index.html" class="static-avatar"><img class="author-profile-image" src="http://www.gravatar.com/avatar/768b02b94182c64b0cc4bbeedcca49f9?s=250&amp;d=mm&amp;r=x" alt="Anam Ahmed" /></a>
+                </li>
+            </ul>
+
+            <span class="reading-time">2 min read</span>
+
+        </footer>
+    </div>
+</article>
+
+        </div>
+    </div>
+</aside>
+
+<div class="floating-header">
+    <div class="floating-header-logo">
+        <a href="https://blog.anam.co/">
+                <img src="../content/images/2018/06/blogfav-1.png" alt="Anam&#x27;s Blog icon" />
+            <span>Anam&#x27;s Blog</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">মার্কডাউন কি এবং কেন?</div>
+    <div class="floating-header-share">
+        <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
+</svg>
+</div>
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%E0%A6%AE%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%95%E0%A6%A1%E0%A6%BE%E0%A6%89%E0%A6%A8%20%E0%A6%95%E0%A6%BF%20%E0%A6%8F%E0%A6%AC%E0%A6%82%20%E0%A6%95%E0%A7%87%E0%A6%A8%3F&amp;url=https://blog.anam.co/markdown-in-bangla/"
+            onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+        </a>
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.anam.co/markdown-in-bangla/"
+            onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+        </a>
+    </div>
+    <progress id="reading-progress" class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+
+
+
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="https://blog.anam.co/">Anam&#x27;s Blog</a> &copy; 2022</section>
+                <nav class="site-footer-nav">
+                    <a href="https://blog.anam.co/">Latest Posts</a>
+                    <a href="https://www.facebook.com/theanam" target="_blank" rel="noopener">Facebook</a>
+                    <a href="https://twitter.com/mranam" target="_blank" rel="noopener">Twitter</a>
+                    <a href="https://ghost.org/" target="_blank" rel="noopener">Ghost</a>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+
+    <script
+        src="../../code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="../assets/js/jquery.fitvids4124.js?v=cfe2113eef"></script>
+
+
+    <script>
+
+// NOTE: Scroll performance is poor in Safari
+// - this appears to be due to the events firing much more slowly in Safari.
+//   Dropping the scroll event and using only a raf loop results in smoother
+//   scrolling but continuous processing even when not scrolling
+$(document).ready(function () {
+    // Start fitVids
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    // End fitVids
+
+    var progressBar = document.querySelector('#reading-progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        // show/hide floating header
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+
+});
+</script>
+
+
+    
+
+</body>
+
+<!-- Mirrored from anam.co/markdown-in-bangla/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 26 Jan 2022 09:53:39 GMT -->
+</html>

@@ -1,0 +1,10 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+gist.github.com	TRUE	/	FALSE	1999999999	_gh_sess	CRc9nwZTjxdi3K8QaFMlbKk4lt7lO8dbaclIn%2BijvAPtyq7XdWENRZfAGj%2Fm1SfPIODOsqnDnM%2FEuf4Pcyni7WOGKauPK7ZObeQKNnM8ouZRsfb8ul5C3%2F1%2B4CkO3zyeb7Zh5cE9YMyb4xwagbWNlgDRnLLNLiX2J1eIxpeRrZWim1zHaY9tw8%2F8dwJpwuI5Jl%2FaH2y4ALy0i9n83o%2F6LX8UELC2BEFBccefrMyK8RO0EKwd0AF1PXA7W0m1SUZJYWRXmFfnQJCOc9Yk8ha22w%3D%3D--dr8rBRJH9yYi1Zae--GRgMp5eIHEzCa4K4bZktdA%3D%3D
+github.com	TRUE	/	FALSE	1999999999	_octo	GH1.1.1700259283.1643190802
+github.com	TRUE	/	FALSE	1999999999	logged_in	no
+gist.github.com	TRUE	/	FALSE	1999999999	SameSite	Lax
+.codepen.io	TRUE	/	FALSE	1999999999	__cf_bm	zFKX74m729u1AVsqHX3VMR049DpXAcqayO5q5eZfpnQ-1643190816-0-ARTxjc1IFC0LIKqPa6gnt1U+qxyloc+xqnlNIzGb+lwxb3odP/7Lwe2rbda3z0VQwElgxrvPb3qH8TNeUV6gXLo=
+codepen.io	TRUE	/	FALSE	1999999999	SameSite	None
+.codepen.io	TRUE	/	FALSE	1999999999	__cfruid	6c3e2d6d7f9790517d88125fbdb36c3f24a63e08-1643190816
+

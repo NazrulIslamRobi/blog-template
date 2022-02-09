@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from anam.co/getting-started-with-heroku-and-node/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 26 Jan 2022 09:53:29 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Heroku তে সহজেই নোডজেএস এপ্লিকেশন হোস্ট করা</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="../assets/built/screen4124.css?v=cfe2113eef" />
+
+    <link rel="shortcut icon" href="../favicon.png" type="image/png" />
+    <link rel="canonical" href="https://blog.anam.co/getting-started-with-heroku-and-node/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <link rel="amphtml" href="https://blog.anam.co/getting-started-with-heroku-and-node/amp/" />
+    
+    <meta property="og:site_name" content="Anam&#x27;s Blog" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Heroku তে সহজেই নোডজেএস এপ্লিকেশন হোস্ট করা" />
+    <meta property="og:description" content="মনে করেন আপনি একটা সুন্দর nodejs এপ্লিকেশন তৈরী করে ফেললেন। এখন আপনার এই এপ্লিকেশন পাবলিশ করার জন্য একটা স্টেপ বাকী থাকে, সেটা হলো এপ্লিকেশন ডি" />
+    <meta property="og:url" content="https://blog.anam.co/getting-started-with-heroku-and-node/" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1526906346362-d9725bfeeb3c?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjExNzczfQ&amp;s=1f9b7a21406c33d9d432ff54ee2953af" />
+    <meta property="article:published_time" content="2018-10-02T19:13:24.000Z" />
+    <meta property="article:modified_time" content="2018-10-03T22:26:49.000Z" />
+    <meta property="article:tag" content="devops" />
+    <meta property="article:tag" content="বাংলা" />
+    
+    <meta property="article:publisher" content="https://www.facebook.com/theanam" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Heroku তে সহজেই নোডজেএস এপ্লিকেশন হোস্ট করা" />
+    <meta name="twitter:description" content="মনে করেন আপনি একটা সুন্দর nodejs এপ্লিকেশন তৈরী করে ফেললেন। এখন আপনার এই এপ্লিকেশন পাবলিশ করার জন্য একটা স্টেপ বাকী থাকে, সেটা হলো এপ্লিকেশন ডি" />
+    <meta name="twitter:url" content="https://blog.anam.co/getting-started-with-heroku-and-node/" />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1526906346362-d9725bfeeb3c?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjExNzczfQ&amp;s=1f9b7a21406c33d9d432ff54ee2953af" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Anam Ahmed" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="devops, বাংলা" />
+    <meta name="twitter:site" content="@mranam" />
+    <meta property="og:image:width" content="1080" />
+    <meta property="og:image:height" content="720" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Anam&#x27;s Blog",
+        "logo": "https://blog.anam.co/content/images/2018/06/bloglogo-1.png"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Anam Ahmed",
+        "image": {
+            "@type": "ImageObject",
+            "url": "//www.gravatar.com/avatar/768b02b94182c64b0cc4bbeedcca49f9?s=250&d=mm&r=x",
+            "width": 250,
+            "height": 250
+        },
+        "url": "https://blog.anam.co/author/anam/",
+        "sameAs": []
+    },
+    "headline": "Heroku তে সহজেই নোডজেএস এপ্লিকেশন হোস্ট করা",
+    "url": "https://blog.anam.co/getting-started-with-heroku-and-node/",
+    "datePublished": "2018-10-02T19:13:24.000Z",
+    "dateModified": "2018-10-03T22:26:49.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://images.unsplash.com/photo-1526906346362-d9725bfeeb3c?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ&s=1f9b7a21406c33d9d432ff54ee2953af",
+        "width": 1080,
+        "height": 720
+    },
+    "keywords": "devops, বাংলা",
+    "description": "মনে করেন আপনি একটা সুন্দর nodejs এপ্লিকেশন তৈরী করে ফেললেন। এখন আপনার এই এপ্লিকেশন পাবলিশ করার জন্য একটা স্টেপ বাকী থাকে, সেটা হলো এপ্লিকেশন ডি",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.anam.co/"
+    }
+}
+    </script>
+
+    <script src="../public/ghost-sdk.min4124.js?v=cfe2113eef"></script>
+<script>
+ghost.init({
+	clientId: "ghost-frontend",
+	clientSecret: "105460a4bc06"
+});
+</script>
+    <meta name="generator" content="Ghost 2.28" />
+    <link rel="alternate" type="application/rss+xml" title="Anam&#x27;s Blog" href="https://blog.anam.co/rss/" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-9646061-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-9646061-2');
+</script>
+
+</head>
+<body class="post-template tag-devops tag-bangla-2">
+
+    <div class="site-wrapper">
+
+        
+
+<header class="site-header outer">
+    <div class="inner">
+        <nav class="site-nav">
+    <div class="site-nav-left">
+                <a class="site-nav-logo" href="https://blog.anam.co/"><img src="../content/images/2018/06/bloglogo-1.png" alt="Anam&#x27;s Blog" /></a>
+            <ul class="nav" role="menu">
+    <li class="nav-home" role="menuitem"><a href="https://blog.anam.co/">Home</a></li>
+    <li class="nav-linux" role="menuitem"><a href="https://blog.anam.co/tag/linux/">Linux</a></li>
+    <li class="nav-containers" role="menuitem"><a href="https://blog.anam.co/tag/docker/">Containers</a></li>
+    <li class="nav-baanlaa" role="menuitem"><a href="https://blog.anam.co/tag/bangla-2/">বাংলা</a></li>
+    <li class="nav-my-github" role="menuitem"><a href="https://github.com/theanam/">My Github</a></li>
+    <li class="nav-my-linkedin" role="menuitem"><a href="https://linkedin.com/in/theanam/">My Linkedin</a></li>
+</ul>
+
+    </div>
+    <div class="site-nav-right">
+        <div class="social-links">
+                <a class="social-link social-link-fb" href="https://www.facebook.com/theanam" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+</a>
+                <a class="social-link social-link-tw" href="https://twitter.com/mranam" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+</a>
+        </div>
+            <a class="rss-button" href="https://feedly.com/i/subscription/feed/https://blog.anam.co/rss/" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="6.18" cy="17.82" r="2.18"/><path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/></svg>
+</a>
+    </div>
+</nav>
+    </div>
+</header>
+
+
+<main id="site-main" class="site-main outer">
+    <div class="inner">
+
+        <article class="post-full post tag-devops tag-bangla-2 ">
+
+            <header class="post-full-header">
+                <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime="2018-10-03">3 October 2018</time>
+                        <span class="date-divider">/</span> <a href="../tag/devops/index.html">devops</a>
+                </section>
+                <h1 class="post-full-title">Heroku তে সহজেই নোডজেএস এপ্লিকেশন হোস্ট করা</h1>
+            </header>
+
+            <figure class="post-full-image" style="background-image: url(https://images.unsplash.com/photo-1526906346362-d9725bfeeb3c?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjExNzczfQ&amp;s=1f9b7a21406c33d9d432ff54ee2953af)">
+            </figure>
+
+            <section class="post-full-content">
+                <div class="post-content">
+                    <p>মনে করেন আপনি একটা সুন্দর nodejs এপ্লিকেশন তৈরী করে ফেললেন। এখন আপনার এই এপ্লিকেশন পাবলিশ করার জন্য একটা স্টেপ বাকী থাকে, সেটা হলো এপ্লিকেশন ডিপ্লয় করা। সাধারন ভাবে এই প্রেসেসে একটা লম্বা লিস্ট ধরে কাজ করতে হয়, যেমন: ডিপেন্ডেন্সি ইনস্টল করা, ওয়েব সার্ভার সেট আপ করা, গিট রিপোজেটরী থেকে সোর্স কোড ক্লোন করা...ব্লা ব্লা,<a href="https://blog.anam.co/docker-in-bangla/"> ডকার ব্যাবহার করলে স্টেপ তুলনামুলক ভাবে কম</a>, তারপরেও ম্যানুয়াল কাজ আছেই। আপনার এপ্লিকেশন যদি CI/CD পাইপলাইন দিয়ে ডিপ্লয় হয় তাইলে অবশ্য এত টেনশন নাই। কিন্তু সেক্ষেত্রে প্রথমে CI সেট আপ করা, সার্ভার মেইনটেইন করা টাইপের হালকা কিছু কাজ থেকেই যায়।</p><p><a href="https://heroku.com/">Heroku</a> ব্যাবহার করলে এপ্লিকেশন ডিপ্লয় করার কষ্ট অনেকাংশেই কমে যাবে। গিট দিয়ে রিমোর্ট ব্রাঞ্চে পুশ করলে সেখান থেকেই বিল্ড হয়ে ডিপ্লয় করে আপ্লিকেশন রেডী করে ফেলবে। আরো মজার বিষয় হচ্ছে ছোট সাইজের এপ্লিনেশনের জন্য বিনামুল্যেই করতে পারবেন। কেবলমাত্র এপ্লিকেশনে যখন লোড বেশ ভালো পরিমানে বেড়ে যাবে, তখন বিলিং নিয়ে টেনশন করতে হবে। আমার এক্স কলিগ রেজা ভাইয়ের মতে, "<em>এই টেনশন আনন্দের টেনশন</em>"</p><p>এই পোস্টে আলোচনা করবো জাভাস্ক্রিপ্ট এপ্লিকেশন ডিপ্লয় করা নিয়ে। তবে অন্য এপ্লিকেশন ডিপ্লয় করার প্রোসেস কম বেশী সেইম। </p><p>প্রথম স্টেপ অবশ্যই এপ্লিকেশন ডেভেলপ করা। তবে এপ্লিকেশন যদি Heroku তে ডিপ্লয় করার প্লান থাকে তাহলে কিছু ব্যাপার মাথায় রাখতে হবে। মজার বিষয় হলো, প্রায় সব বিষয়ই বেস্ট প্রাকটিসেরই অংশ, <a href="https://heroku.com/">Heroku</a> তে এপ্লিকেশন না হোস্ট করলেও এপ্লিকেশন এমনভাবেই বানানো উচিত</p><p>১। এপ্লিকেশনের সব কনফিগারেশন, এপিআই কি লোড করতে হবে Environment Variable দিয়ে। এক্ষেত্রে ডেভেলপমেন্টের সময় অনেকেই কনফিগারেশন রাখে <code>.env</code> ফাইলে এরপর dotenv নামে একটা নোড প্যাকেজ আছে সেটা দিয়ে ভ্যালুগুলো Environment Variable হিসেবে লোড করে।তবে মনে করে <code>.env</code> ফাইল <code>.gitignore</code> এ এড করতে ভুলবেন না। </p><p>২। লোকাল ফাইলসিস্টেমে রানটাইমে ফাইল রাখার ব্যাপারটা পরিহার করতে হবে। ভালো প্রাকটিস হচ্ছে সব স্ট্যাটিক ফাইল কোন ফাইল স্টোরেজ সার্ভিসে রাখা</p><p>৩। <a href="https://heroku.com/">Heroku</a> এর সাথে রিলেশনাল ডাটাবেজ হিসেবে <a href="https://www.postgresql.org/">Postgres</a> ব্যবহার করা যায় (Heroku এর Heroku Postgres এড অন দিয়ে), ডেভেলপমেন্টের সময় পোস্টগ্রেস টার্গেট করে ডাটাবেজ ডিজাইন করাটা জরুরী।</p><p>৪। <a href="https://heroku.com/">Heroku</a> এর সাথে <a href="https://redis.io/">Redis</a> ও ব্যাবহার করা যায়, ক্যাশ করা আর অপেক্ষাকৃত টেম্পোরারী জিনিসপত্র রাখার জন্য ডেভেলপ করার সময় <a href="https://redis.io/">Redis</a> এ ক্যাশ করার ফিচার সহ এপ্লিকেশন ডেভলপ করতে পারেন।</p><p>৫। প্রোর্ট এসাইন করার সময় <code>process.env.PORT</code>  ব্যাবহার করতে হবে এবং অলটারনেটিভ হিসেবে অন্য একটা পোর্ট (Heroku এর স্যাম্পল এপ্লিকেশনে <code>5050</code> দেয়া আছে) । এক্সপ্রেসের ক্ষেত্রে লাইনটা হবে কিছুটা এমন : <code>app.listen(process.env.PORT || 5000)</code></p><h4 id="-">এপ্লিকেশন রেডী করা:</h4><p>জাভাস্ক্রিপ্ট এপ্লিকেশন <a href="https://heroku.com/">Heroku</a> তে ডিপ্লয় করার জন্য যেটা থাকতেই হবে সেটা হলো একটা জাভাস্ক্রিপ্ট এপ্লিকেশন। যদি জাভাস্ক্রিপ্ট এপ্লিকেশন তৈরী করা শিখতে চান,<a href="https://learnwith.hasinhayder.com/wp/shop/fullstack-modern-javascript-es6-es7/"> আমার একটা অনলাইন কোর্স আছে সেটাতে এনরোল করতে পারেন</a>।</p><p>এপ্লিকেশনের <code>package.json</code> ফাইলে দুইটা নতুন রেকর্ড যোগ করতে হবে, নীচে একটা বেসিক <code>package.json</code> এর স্যাম্পল দেয়া আছে (<a href="https://heroku.com/">Heroku</a> এর ডকুমেন্টেশন থেকে)</p><pre><code>{
+  &quot;name&quot;: &quot;myapp&quot;,
+  &quot;description&quot;: &quot;a really cool app&quot;,
+  &quot;main&quot;: &quot;index.js&quot;,
+  &quot;scripts&quot;:{
+      &quot;start&quot;:&quot;node index.js&quot;
+  }
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;engines&quot;: {
+   &quot;node&quot;: &quot;10.2.1&quot;
+  }
+}</code></pre>
+<p>উপরের ফাইলে <code>engines</code> অংশটা এক্সট্রা করে যোগ করা, সেখানে এপ্লিকেশন চালানোর জন্য নোডজেএস এর ভার্শন দেয়া আছে । আমার সাজেশন থাকবে আপনার ডেভেলপমেন্ট সিস্টেমের ভার্শনই দেয়া। <code>node</code>এর ভার্শন দেখার জন্য <code>--version</code> দিয়ে কমান্ড চালালেই হবে। যেমন <code>node --version</code> দিলে নোডজেএস এর ইনস্টল করা ভার্শন দেখাবে।</p><p>সাথে স্ক্রিপ্টস অংশে অবশ্যই <code>"start":"node index.js"</code> (অথবা আপনার এপ্লিকেশনের লঞ্চিং কমান্ড লিখে দিতে ভুলবেন না)</p><h4 id="--1">এপ্লিকেশন ডিপ্লয় করা:</h4><p>১। <a href="https://heroku.com/">Heroku</a> তে একটা একাউন্ট খুলে Heroku কমান্ড লাইন টুল ইনস্টল করতে হবে। ইনস্ট্রাকশন <a href="https://devcenter.heroku.com/articles/heroku-cli#download-and-install">এই লিংকে পাবেন</a></p><p>২। কমান্ড লাইনে <code>heroku login</code> কমান্ড দিয়ে ইউজারনেম আর পাসওয়ার্ড দিয়ে লগ ইন করতে হবে।</p><p>৩। কমান্ড লাইনে ন্যাভিগেট করে আপনার নোডজেএস এর প্রোজেক্ট ফোল্ডারে যেতে হবে। কমান্ড লাইনে অভ্যস্ত না থাকলে <a href="https://www.letslearncoding.co/course/demystifying-linux-shell-scripting-online">আমার কমান্ড লাইনের অনলাইন কোর্সে অংশগ্রহন করতে পারেন</a></p><p>৪। প্রোজেক্ট ফোল্ডারে গিয়ে <code>heroku create &lt;appname&gt;</code> দিয়ে একটা নতুন এপ্লিকেশন তৈরী করতে হবে। <code>&lt;appname&gt;</code> এর যায়গায় একটা ইউনিক নাম দিবেন, কমন নাম বেশীভাগ সময় দেখা যাবে পাওয়া যাচ্ছে না। এখানে আরো উল্লেখ্য: আপনার প্রোজেক্টের ভার্শন ম্যানেজমেন্টের জন্য <code>git</code> ব্যবহার করতে হবে। এই কমান্ড চালানোর পর <code>heroku</code> একটা নতুন রিমোট রিপোজিটরী যোগ হবে আপনার প্রোজেক্টে, আপনি সরাসরি সেখানে কোড পুশ করতে পারবেন।</p><p>৫। আপনার প্রোজেক্টের যত কনফিগারেশন, এপিআই কি আছে, সেগুলো নীচের কমান্ডের মত কমান্ড রান করে প্রোজেক্টে যোগ করতে হবে:</p><pre><code>heroku config:set MY_API_KEY=khubsecretkichuakta</code></pre>
+<p>এই কমান্ড দিয়ে যোগ করা সব ডাটা আপনি আপনার প্রোজেক্টে <code>process.env</code> অবজেক্টের প্রোপার্টি আকারে পাবেন।</p><p>৬। ডাটাবেজ যোগ করতে চাইলে এড অন হিসেবে পোস্টগ্রেস যোগ করতে হবে নীচের কমান্ডের মাধ্যমে:</p><pre><code>heroku addons:create heroku-postgresql:hobby-dev</code></pre>
+<p><code>hobby-dev</code> প্লান ডাটাবেজের জন্য ফ্রি, আর ছোট প্রোজেক্টের জন্য যথেষ্ট। এই কমান্ড চালানোর পর <code>DATABASE_URL</code> নামে একটা নতুন Envionment Variable যোগ হবে প্রোজেক্টে, এই ভ্যারিয়েবল একটা কানেকশন স্ট্রিং, আপনার ডাটাবেজ কানেকশনের কোডের কানেকশন স্ট্রিং এর যায়গায় <code>process.env.DATABASE_URL</code> ব্যাবহার করলেই কানেক্ট হয়ে যাবে ডাটাবেজে।</p><p>৭। সব কনফিগার করা শেষ হলে এবার কোড পুশ করার পালা, গিট দিয়ে <code>heroku</code> রিমোর্ট রিপোজেটরীতে পুশ করলেই ডিপ্লয়মেন্ট শুরু হবে:</p><pre><code>git push heroku master</code></pre>
+<p>পুশ করা শেষ হলে, Heroku নিজ দায়িত্বে <code>npm install</code> অথবা প্রোজেক্টে <code>yarn.lock</code> কমিট করা থাকলে <code>yarn install</code> চালিয়ে ডিপেন্ডেন্সি ইনস্টল করে নিবে, তারপর আপনার প্রোজেক্ট <code>nodejs</code> দিয়ে রান করে আপনাকে প্রোজেক্ট এক্সেস করার URL দিয়ে দিবে। </p><p>ব্যাস হয়ে গেল। সব ঠিকঠাক ভাবে করলে আপনার এপ্লিকেশনটি Heroku তে ডিপ্লয় হয়ে যাবে 😃</p>
+                </div>
+            </section>
+            <section class="disqus-comments post-full-content">
+                <style>
+                    .disqus-comments.post-full-content::before {
+                        display: none;
+                    }
+            
+                    .disqus-comments.post-full-content::after {
+                        display: none;
+                    }
+                </style>
+            
+                <div id="disqus_thread"></div>
+                <script>
+
+                    /**
+                    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+                    var disqus_config = function () {
+                        //this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                        this.page.identifier = "ghost-5bb25c8695d30a0001a25d15"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    };
+                    (function () { // DON'T EDIT BELOW THIS LINE
+                        var d = document, s = d.createElement('script');
+                        s.src = '../../anamsblog.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the
+                    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+                </noscript>
+            </section>
+
+            <footer class="post-full-footer">
+
+
+                    
+<section class="author-card">
+        <img class="author-profile-image" src="http://www.gravatar.com/avatar/768b02b94182c64b0cc4bbeedcca49f9?s=250&amp;d=mm&amp;r=x" alt="Anam Ahmed" />
+    <section class="author-card-content">
+        <h4 class="author-card-name"><a href="../author/anam/index.html">Anam Ahmed</a></h4>
+            <p>Read <a href="../author/anam/index.html">more posts</a> by this author.</p>
+    </section>
+</section>
+<div class="post-full-footer-right">
+    <a class="author-card-button" href="../author/anam/index.html">Read More</a>
+</div>
+
+
+            </footer>
+
+
+        </article>
+
+    </div>
+</main>
+
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+                <article class="read-next-card"
+                            style="background-image: url(../../casper.ghost.org/v1.0.0/images/blog-cover.jpg)"
+                >
+                    <header class="read-next-card-header">
+                        <small class="read-next-card-header-sitetitle">&mdash; Anam&#x27;s Blog &mdash;</small>
+                        <h3 class="read-next-card-header-title"><a href="../tag/devops/index.html">devops</a></h3>
+                    </header>
+                    <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
+</div>
+                    <div class="read-next-card-content">
+                        <ul>
+                            <li><a href="../lessons-i-learned-trying-to-record-video-streams-from-the-frontend-best-practices/index.html">Recording webRTC Videos. Methods I tried, Lessons I learned.</a></li>
+                            <li><a href="../one-of-the-biggest-scaling-challenges-in-my-career/index.html">How I solved an interesting Scaling problem.</a></li>
+                            <li><a href="../easy-wordpress-development-with-docker/index.html">Easy WordPress Development with Docker</a></li>
+                        </ul>
+                    </div>
+                    <footer class="read-next-card-footer">
+                        <a href="../tag/devops/index.html">See all 9 posts →</a>
+                    </footer>
+                </article>
+
+                <article class="post-card post tag-javascript tag-english tag-front-end">
+        <a class="post-card-image-link" href="../serverless-data-sharing-inside-url/index.html">
+            <div class="post-card-image" style="background-image: url(https://images.unsplash.com/photo-1521185496955-15097b20c5fe?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjExNzczfQ&amp;s=974cb4116a3f0ce58673b780aaf17585)"></div>
+        </a>
+    <div class="post-card-content">
+        <a class="post-card-content-link" href="../serverless-data-sharing-inside-url/index.html">
+            <header class="post-card-header">
+                    <span class="post-card-tags">JavaScript</span>
+                <h2 class="post-card-title">How I created code sharing feature in my application without using a server</h2>
+            </header>
+            <section class="post-card-excerpt">
+                <p>I have a very small repl-ish JavaScript code demonstration platform I call EvilEval, I usually make screencasts on JavaScript and use this tool to demonstrate basic JavaScript. The project is hosted with Github</p>
+            </section>
+        </a>
+        <footer class="post-card-meta">
+
+            <ul class="author-list">
+                <li class="author-list-item">
+
+                    <div class="author-name-tooltip">
+                        Anam Ahmed
+                    </div>
+
+                        <a href="../author/anam/index.html" class="static-avatar"><img class="author-profile-image" src="http://www.gravatar.com/avatar/768b02b94182c64b0cc4bbeedcca49f9?s=250&amp;d=mm&amp;r=x" alt="Anam Ahmed" /></a>
+                </li>
+            </ul>
+
+            <span class="reading-time">2 min read</span>
+
+        </footer>
+    </div>
+</article>
+
+                <article class="post-card post tag-review tag-mac tag-apple tag-english">
+        <a class="post-card-image-link" href="../updating-to-mojave/index.html">
+            <div class="post-card-image" style="background-image: url(https://images.unsplash.com/photo-1498144668414-48bf526766cf?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjExNzczfQ&amp;s=75fa71d5482c513cc482c9fa13948a07)"></div>
+        </a>
+    <div class="post-card-content">
+        <a class="post-card-content-link" href="../updating-to-mojave/index.html">
+            <header class="post-card-header">
+                    <span class="post-card-tags">review</span>
+                <h2 class="post-card-title">Mac OS Mojave is a good one</h2>
+            </header>
+            <section class="post-card-excerpt">
+                <p>Mac OS Mojave was released a few hours ago. People are usually very skeptical about Mac updated. I still meet good people who use older versions of this OS in their newer hardware</p>
+            </section>
+        </a>
+        <footer class="post-card-meta">
+
+            <ul class="author-list">
+                <li class="author-list-item">
+
+                    <div class="author-name-tooltip">
+                        Anam Ahmed
+                    </div>
+
+                        <a href="../author/anam/index.html" class="static-avatar"><img class="author-profile-image" src="http://www.gravatar.com/avatar/768b02b94182c64b0cc4bbeedcca49f9?s=250&amp;d=mm&amp;r=x" alt="Anam Ahmed" /></a>
+                </li>
+            </ul>
+
+            <span class="reading-time">2 min read</span>
+
+        </footer>
+    </div>
+</article>
+
+        </div>
+    </div>
+</aside>
+
+<div class="floating-header">
+    <div class="floating-header-logo">
+        <a href="https://blog.anam.co/">
+                <img src="../content/images/2018/06/blogfav-1.png" alt="Anam&#x27;s Blog icon" />
+            <span>Anam&#x27;s Blog</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">Heroku তে সহজেই নোডজেএস এপ্লিকেশন হোস্ট করা</div>
+    <div class="floating-header-share">
+        <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
+</svg>
+</div>
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Heroku%20%E0%A6%A4%E0%A7%87%20%E0%A6%B8%E0%A6%B9%E0%A6%9C%E0%A7%87%E0%A6%87%20%E0%A6%A8%E0%A7%8B%E0%A6%A1%E0%A6%9C%E0%A7%87%E0%A6%8F%E0%A6%B8%20%E0%A6%8F%E0%A6%AA%E0%A7%8D%E0%A6%B2%E0%A6%BF%E0%A6%95%E0%A7%87%E0%A6%B6%E0%A6%A8%20%E0%A6%B9%E0%A7%8B%E0%A6%B8%E0%A7%8D%E0%A6%9F%20%E0%A6%95%E0%A6%B0%E0%A6%BE&amp;url=https://blog.anam.co/getting-started-with-heroku-and-node/"
+            onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+        </a>
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.anam.co/getting-started-with-heroku-and-node/"
+            onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+        </a>
+    </div>
+    <progress id="reading-progress" class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+
+
+
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="https://blog.anam.co/">Anam&#x27;s Blog</a> &copy; 2022</section>
+                <nav class="site-footer-nav">
+                    <a href="https://blog.anam.co/">Latest Posts</a>
+                    <a href="https://www.facebook.com/theanam" target="_blank" rel="noopener">Facebook</a>
+                    <a href="https://twitter.com/mranam" target="_blank" rel="noopener">Twitter</a>
+                    <a href="https://ghost.org/" target="_blank" rel="noopener">Ghost</a>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+
+    <script
+        src="../../code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="../assets/js/jquery.fitvids4124.js?v=cfe2113eef"></script>
+
+
+    <script>
+
+// NOTE: Scroll performance is poor in Safari
+// - this appears to be due to the events firing much more slowly in Safari.
+//   Dropping the scroll event and using only a raf loop results in smoother
+//   scrolling but continuous processing even when not scrolling
+$(document).ready(function () {
+    // Start fitVids
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    // End fitVids
+
+    var progressBar = document.querySelector('#reading-progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        // show/hide floating header
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+
+});
+</script>
+
+
+    
+
+</body>
+
+<!-- Mirrored from anam.co/getting-started-with-heroku-and-node/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 26 Jan 2022 09:53:29 GMT -->
+</html>

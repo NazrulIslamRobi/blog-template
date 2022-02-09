@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from anam.co/css-position-sticky-in-bangla/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 26 Jan 2022 09:53:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>পজিশন: স্টিকি,আমার হঠাত করে খুঁজে পাওয়া মজার একটা সি এস এস ফিচার</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="../assets/built/screen4124.css?v=cfe2113eef" />
+
+    <link rel="shortcut icon" href="../favicon.png" type="image/png" />
+    <link rel="canonical" href="https://blog.anam.co/css-position-sticky-in-bangla/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <link rel="amphtml" href="https://blog.anam.co/css-position-sticky-in-bangla/amp/" />
+    
+    <meta property="og:site_name" content="Anam&#x27;s Blog" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="পজিশন: স্টিকি,আমার হঠাত করে খুঁজে পাওয়া মজার একটা সি এস এস ফিচার" />
+    <meta property="og:description" content="আনকমন বা ব্রাউজারে কম সাপোর্ট করে এমন ফিচারের নাম ভুলে যাই। এর আগের ব্লগ পোস্টে স্ক্রল স্ন্যাপ নিয়ে লেখার সময় এই ফিচারের রে" />
+    <meta property="og:url" content="https://blog.anam.co/css-position-sticky-in-bangla/" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1503551723145-6c040742065b?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjExNzczfQ&amp;s=5ddc8ede2d2a0a1eb9a43d0c03c6a762" />
+    <meta property="article:published_time" content="2018-10-26T18:37:26.000Z" />
+    <meta property="article:modified_time" content="2018-10-26T18:58:26.000Z" />
+    <meta property="article:tag" content="css" />
+    <meta property="article:tag" content="front end" />
+    <meta property="article:tag" content="বাংলা" />
+    
+    <meta property="article:publisher" content="https://www.facebook.com/theanam" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="পজিশন: স্টিকি,আমার হঠাত করে খুঁজে পাওয়া মজার একটা সি এস এস ফিচার" />
+    <meta name="twitter:description" content="আনকমন বা ব্রাউজারে কম সাপোর্ট করে এমন ফিচারের নাম ভুলে যাই। এর আগের ব্লগ পোস্টে স্ক্রল স্ন্যাপ নিয়ে লেখার সময় এই ফিচারের রে" />
+    <meta name="twitter:url" content="https://blog.anam.co/css-position-sticky-in-bangla/" />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1503551723145-6c040742065b?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjExNzczfQ&amp;s=5ddc8ede2d2a0a1eb9a43d0c03c6a762" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Anam Ahmed" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="css, front end, বাংলা" />
+    <meta name="twitter:site" content="@mranam" />
+    <meta property="og:image:width" content="1080" />
+    <meta property="og:image:height" content="720" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Anam&#x27;s Blog",
+        "logo": "https://blog.anam.co/content/images/2018/06/bloglogo-1.png"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Anam Ahmed",
+        "image": {
+            "@type": "ImageObject",
+            "url": "//www.gravatar.com/avatar/768b02b94182c64b0cc4bbeedcca49f9?s=250&d=mm&r=x",
+            "width": 250,
+            "height": 250
+        },
+        "url": "https://blog.anam.co/author/anam/",
+        "sameAs": []
+    },
+    "headline": "পজিশন: স্টিকি,আমার হঠাত করে খুঁজে পাওয়া মজার একটা সি এস এস ফিচার",
+    "url": "https://blog.anam.co/css-position-sticky-in-bangla/",
+    "datePublished": "2018-10-26T18:37:26.000Z",
+    "dateModified": "2018-10-26T18:58:26.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://images.unsplash.com/photo-1503551723145-6c040742065b?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ&s=5ddc8ede2d2a0a1eb9a43d0c03c6a762",
+        "width": 1080,
+        "height": 720
+    },
+    "keywords": "css, front end, বাংলা",
+    "description": "আনকমন বা ব্রাউজারে কম সাপোর্ট করে এমন ফিচারের নাম ভুলে যাই। এর আগের ব্লগ পোস্টে স্ক্রল স্ন্যাপ নিয়ে লেখার সময় এই ফিচারের রে",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.anam.co/"
+    }
+}
+    </script>
+
+    <script src="../public/ghost-sdk.min4124.js?v=cfe2113eef"></script>
+<script>
+ghost.init({
+	clientId: "ghost-frontend",
+	clientSecret: "105460a4bc06"
+});
+</script>
+    <meta name="generator" content="Ghost 2.28" />
+    <link rel="alternate" type="application/rss+xml" title="Anam&#x27;s Blog" href="https://blog.anam.co/rss/" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-9646061-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-9646061-2');
+</script>
+
+</head>
+<body class="post-template tag-css tag-front-end tag-bangla-2">
+
+    <div class="site-wrapper">
+
+        
+
+<header class="site-header outer">
+    <div class="inner">
+        <nav class="site-nav">
+    <div class="site-nav-left">
+                <a class="site-nav-logo" href="https://blog.anam.co/"><img src="../content/images/2018/06/bloglogo-1.png" alt="Anam&#x27;s Blog" /></a>
+            <ul class="nav" role="menu">
+    <li class="nav-home" role="menuitem"><a href="https://blog.anam.co/">Home</a></li>
+    <li class="nav-linux" role="menuitem"><a href="https://blog.anam.co/tag/linux/">Linux</a></li>
+    <li class="nav-containers" role="menuitem"><a href="https://blog.anam.co/tag/docker/">Containers</a></li>
+    <li class="nav-baanlaa" role="menuitem"><a href="https://blog.anam.co/tag/bangla-2/">বাংলা</a></li>
+    <li class="nav-my-github" role="menuitem"><a href="https://github.com/theanam/">My Github</a></li>
+    <li class="nav-my-linkedin" role="menuitem"><a href="https://linkedin.com/in/theanam/">My Linkedin</a></li>
+</ul>
+
+    </div>
+    <div class="site-nav-right">
+        <div class="social-links">
+                <a class="social-link social-link-fb" href="https://www.facebook.com/theanam" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+</a>
+                <a class="social-link social-link-tw" href="https://twitter.com/mranam" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+</a>
+        </div>
+            <a class="rss-button" href="https://feedly.com/i/subscription/feed/https://blog.anam.co/rss/" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="6.18" cy="17.82" r="2.18"/><path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/></svg>
+</a>
+    </div>
+</nav>
+    </div>
+</header>
+
+
+<main id="site-main" class="site-main outer">
+    <div class="inner">
+
+        <article class="post-full post tag-css tag-front-end tag-bangla-2 ">
+
+            <header class="post-full-header">
+                <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime="2018-10-27">27 October 2018</time>
+                        <span class="date-divider">/</span> <a href="../tag/css/index.html">css</a>
+                </section>
+                <h1 class="post-full-title">পজিশন: স্টিকি,আমার হঠাত করে খুঁজে পাওয়া মজার একটা সি এস এস ফিচার</h1>
+            </header>
+
+            <figure class="post-full-image" style="background-image: url(https://images.unsplash.com/photo-1503551723145-6c040742065b?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjExNzczfQ&amp;s=5ddc8ede2d2a0a1eb9a43d0c03c6a762)">
+            </figure>
+
+            <section class="post-full-content">
+                <div class="post-content">
+                    <p>আনকমন বা ব্রাউজারে কম সাপোর্ট করে এমন ফিচারের নাম ভুলে যাই। এর আগের ব্লগ পোস্টে স্ক্রল স্ন্যাপ নিয়ে লেখার সময় এই ফিচারের রেফারেন্স খুজতে গিয়ে ভুল কীওয়ার্ড দেয়াতে নতুন একটা সি এস এস ফিচার খুজে পেয়ে গিয়েছিলাম। আজকে সেটা নিয়েই লিখবো।</p><p>একটা স্যাম্পল দিয়ে শুরু করি: </p><iframe height='300px' scrolling='no' title='Position Sticky Sample' src='http://codepen.io/theanam/embed/MPLBYy/?height=265&amp;theme-id=0&amp;default-tab=css,result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/theanam/pen/MPLBYy/'>Position Sticky Sample</a> by Anam Ahmed (<a href='https://codepen.io/theanam'>@theanam</a>) on <a href='https://codepen.io/'>CodePen</a>.
+</iframe><p>স্যাম্পলটাতে স্ক্রল করলে খেয়াল করবেন, প্রথমে স্টিকি লেখা এলিমেন্ট নরমালি স্ক্রল হয়, তারপর হঠাত করে যেই একটা নির্দিষ্ট যায়গায় পৌছে যায়, তখন আর স্ক্রল করেনা <code>position:fixed</code> এলিমেন্টের মত চুপচাপ ঐখানেই বসে থাকে। </p><p>যেকোন এলিমেন্টকে পজিশন স্টিকিতে পরিনত করতে দুইটা প্রোপার্টি দরকার, একটা <code>position:sticky</code> আর একটা কোন পজিশনে গেলে স্টিকি হয়ে যাবে সেটা। এইটা পুরান পজিশনিং সি এস এস দিয়েই ( <code>top</code>, <code>right</code>, <code>bottom</code> <code>left</code> এইগুলো ) করা যায়। আমার স্যাম্পলে আমি চাচ্ছিলাম এলিমেন্ট <code>top:10px</code> এ আটকে যাক। তাই আমার সি এস এস ছিলো:</p><pre><code>.sticky{
+    position:sticky;
+    top:10px;
+}</code></pre>
+<p>এর মানে আমি যখন স্ক্রল করতে করতে আমার ভিউপোর্টের উপরের আংশের সাথে আমার এলিমে ন্টের টপ পজিশনের দুরত্ব ১০ পিক্সেল অথবা এর কম থাকবে, এলিমেন্ট <code>position:fixed</code> এর মত হয়ে যাবে। </p><p>স্ক্রল করতে গিয়েই খেয়াল করবেন যখন আমার স্টিকি এলিমেন্ট(লাল রংয়ের) উপরের ধারের একেবারে কাছে চলে আসে (১০ পিক্সেল বা তার কম) তখনই আটকে যায়। এইরকম চাইলে যত ইচ্ছা তত এলিমেন্টে স্টিকি পজিশনিং ব্যবহার করা যায়। </p><p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position#Sticky_positioning">ফিচারটির রেফারেন্স ডকুমেন্ট পাবেন এই লিংকে</a></p><h4 id="-">ব্রাউজার সাপোর্ট:</h4><p>ব্রাউজার সাপোর্ট মাশাআল্লাহ ভালো। অপেরা মিনি আর কিছু অচেনা চাইনিজ ব্রাউজার বাদ দিলে সব ব্রাউজারে মোটামুটি কম বেশী সাপোর্ট করে এই ফিচার। </p><p><a href="https://caniuse.com/#search=sticky">পুরো ব্রাউজার কম্প্যাটিবিলিটি টেবিল পাবেন এই লিংক‌ে</a></p><blockquote>সি এস এস দিয়ে এখন অনেক কিছুই করা যায় যেগুলো করতে আগে আলাদা জাভাস্ক্রিপ্ট লাইব্রেরী দরকার হতো। ব্যাপারটা বেশ মজার।</blockquote>
+                </div>
+            </section>
+            <section class="disqus-comments post-full-content">
+                <style>
+                    .disqus-comments.post-full-content::before {
+                        display: none;
+                    }
+            
+                    .disqus-comments.post-full-content::after {
+                        display: none;
+                    }
+                </style>
+            
+                <div id="disqus_thread"></div>
+                <script>
+
+                    /**
+                    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+                    var disqus_config = function () {
+                        //this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                        this.page.identifier = "ghost-5bd34e98d2cdca00019139cc"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    };
+                    (function () { // DON'T EDIT BELOW THIS LINE
+                        var d = document, s = d.createElement('script');
+                        s.src = '../../anamsblog.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the
+                    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+                </noscript>
+            </section>
+
+            <footer class="post-full-footer">
+
+
+                    
+<section class="author-card">
+        <img class="author-profile-image" src="http://www.gravatar.com/avatar/768b02b94182c64b0cc4bbeedcca49f9?s=250&amp;d=mm&amp;r=x" alt="Anam Ahmed" />
+    <section class="author-card-content">
+        <h4 class="author-card-name"><a href="../author/anam/index.html">Anam Ahmed</a></h4>
+            <p>Read <a href="../author/anam/index.html">more posts</a> by this author.</p>
+    </section>
+</section>
+<div class="post-full-footer-right">
+    <a class="author-card-button" href="../author/anam/index.html">Read More</a>
+</div>
+
+
+            </footer>
+
+
+        </article>
+
+    </div>
+</main>
+
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+                <article class="read-next-card"
+                            style="background-image: url(../../casper.ghost.org/v1.0.0/images/blog-cover.jpg)"
+                >
+                    <header class="read-next-card-header">
+                        <small class="read-next-card-header-sitetitle">&mdash; Anam&#x27;s Blog &mdash;</small>
+                        <h3 class="read-next-card-header-title"><a href="../tag/css/index.html">css</a></h3>
+                    </header>
+                    <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
+</div>
+                    <div class="read-next-card-content">
+                        <ul>
+                            <li><a href="../css-scroll-snap-in-bangla/index.html">CSS স্ক্রল স্ন্যাপ। জাভাস্ক্রিপ্ট ছাড়াই স্ক্রল নিয়ন্ত্রন করা</a></li>
+                            <li><a href="../css-variables-introduction/index.html">The brave new world of CSS variables (Custom Properties)</a></li>
+                            <li><a href="../mastering-css-shadows/index.html">Mastering the Mystique Art of CSS Shadows</a></li>
+                        </ul>
+                    </div>
+                    <footer class="read-next-card-footer">
+                        <a href="../tag/css/index.html">See all 5 posts →</a>
+                    </footer>
+                </article>
+
+                <article class="post-card post tag-english tag-story tag-devops tag-software">
+        <a class="post-card-image-link" href="../one-of-the-biggest-scaling-challenges-in-my-career/index.html">
+            <div class="post-card-image" style="background-image: url(https://images.unsplash.com/photo-1435686858161-59da32dfd4b4?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjExNzczfQ&amp;s=0fbf3832e7556a5903f3a0bf719ec58a)"></div>
+        </a>
+    <div class="post-card-content">
+        <a class="post-card-content-link" href="../one-of-the-biggest-scaling-challenges-in-my-career/index.html">
+            <header class="post-card-header">
+                    <span class="post-card-tags">english</span>
+                <h2 class="post-card-title">How I solved an interesting Scaling problem.</h2>
+            </header>
+            <section class="post-card-excerpt">
+                <p>One of my younger brothers and friend joined a new company. The brand was old, but they restarted their operation, So they were still hiring people. They did not have a technology team</p>
+            </section>
+        </a>
+        <footer class="post-card-meta">
+
+            <ul class="author-list">
+                <li class="author-list-item">
+
+                    <div class="author-name-tooltip">
+                        Anam Ahmed
+                    </div>
+
+                        <a href="../author/anam/index.html" class="static-avatar"><img class="author-profile-image" src="http://www.gravatar.com/avatar/768b02b94182c64b0cc4bbeedcca49f9?s=250&amp;d=mm&amp;r=x" alt="Anam Ahmed" /></a>
+                </li>
+            </ul>
+
+            <span class="reading-time">3 min read</span>
+
+        </footer>
+    </div>
+</article>
+
+                <article class="post-card post tag-css tag-front-end tag-bangla-2">
+        <a class="post-card-image-link" href="../css-scroll-snap-in-bangla/index.html">
+            <div class="post-card-image" style="background-image: url(https://images.unsplash.com/photo-1495482479037-588f9b3712c6?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjExNzczfQ&amp;s=f0f63b58d52645e388672284f7161d10)"></div>
+        </a>
+    <div class="post-card-content">
+        <a class="post-card-content-link" href="../css-scroll-snap-in-bangla/index.html">
+            <header class="post-card-header">
+                    <span class="post-card-tags">css</span>
+                <h2 class="post-card-title">CSS স্ক্রল স্ন্যাপ। জাভাস্ক্রিপ্ট ছাড়াই স্ক্রল নিয়ন্ত্রন করা</h2>
+            </header>
+            <section class="post-card-excerpt">
+                <p>যখন সি এস এস ৩ প্রথম ড্রাফ্ট হয় আর মেজর ব্রাউজারেরা এর কিছু কিছু ফিচার ইমপ্লিমেন্ট করা</p>
+            </section>
+        </a>
+        <footer class="post-card-meta">
+
+            <ul class="author-list">
+                <li class="author-list-item">
+
+                    <div class="author-name-tooltip">
+                        Anam Ahmed
+                    </div>
+
+                        <a href="../author/anam/index.html" class="static-avatar"><img class="author-profile-image" src="http://www.gravatar.com/avatar/768b02b94182c64b0cc4bbeedcca49f9?s=250&amp;d=mm&amp;r=x" alt="Anam Ahmed" /></a>
+                </li>
+            </ul>
+
+            <span class="reading-time">1 min read</span>
+
+        </footer>
+    </div>
+</article>
+
+        </div>
+    </div>
+</aside>
+
+<div class="floating-header">
+    <div class="floating-header-logo">
+        <a href="https://blog.anam.co/">
+                <img src="../content/images/2018/06/blogfav-1.png" alt="Anam&#x27;s Blog icon" />
+            <span>Anam&#x27;s Blog</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">পজিশন: স্টিকি,আমার হঠাত করে খুঁজে পাওয়া মজার একটা সি এস এস ফিচার</div>
+    <div class="floating-header-share">
+        <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
+</svg>
+</div>
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%E0%A6%AA%E0%A6%9C%E0%A6%BF%E0%A6%B6%E0%A6%A8%3A%20%E0%A6%B8%E0%A7%8D%E0%A6%9F%E0%A6%BF%E0%A6%95%E0%A6%BF%2C%E0%A6%86%E0%A6%AE%E0%A6%BE%E0%A6%B0%20%E0%A6%B9%E0%A6%A0%E0%A6%BE%E0%A6%A4%20%E0%A6%95%E0%A6%B0%E0%A7%87%20%E0%A6%96%E0%A7%81%E0%A6%81%E0%A6%9C%E0%A7%87%20%E0%A6%AA%E0%A6%BE%E0%A6%93%E0%A7%9F%E0%A6%BE%20%E0%A6%AE%E0%A6%9C%E0%A6%BE%E0%A6%B0%20%E0%A6%8F%E0%A6%95%E0%A6%9F%E0%A6%BE%20%E0%A6%B8%E0%A6%BF%20%E0%A6%8F%E0%A6%B8%20%E0%A6%8F%E0%A6%B8%20%E0%A6%AB%E0%A6%BF%E0%A6%9A%E0%A6%BE%E0%A6%B0&amp;url=https://blog.anam.co/css-position-sticky-in-bangla/"
+            onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+        </a>
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.anam.co/css-position-sticky-in-bangla/"
+            onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+        </a>
+    </div>
+    <progress id="reading-progress" class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+
+
+
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="https://blog.anam.co/">Anam&#x27;s Blog</a> &copy; 2022</section>
+                <nav class="site-footer-nav">
+                    <a href="https://blog.anam.co/">Latest Posts</a>
+                    <a href="https://www.facebook.com/theanam" target="_blank" rel="noopener">Facebook</a>
+                    <a href="https://twitter.com/mranam" target="_blank" rel="noopener">Twitter</a>
+                    <a href="https://ghost.org/" target="_blank" rel="noopener">Ghost</a>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+
+    <script
+        src="../../code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="../assets/js/jquery.fitvids4124.js?v=cfe2113eef"></script>
+
+
+    <script>
+
+// NOTE: Scroll performance is poor in Safari
+// - this appears to be due to the events firing much more slowly in Safari.
+//   Dropping the scroll event and using only a raf loop results in smoother
+//   scrolling but continuous processing even when not scrolling
+$(document).ready(function () {
+    // Start fitVids
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    // End fitVids
+
+    var progressBar = document.querySelector('#reading-progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        // show/hide floating header
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+
+});
+</script>
+
+
+    
+
+</body>
+
+<!-- Mirrored from anam.co/css-position-sticky-in-bangla/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 26 Jan 2022 09:53:26 GMT -->
+</html>

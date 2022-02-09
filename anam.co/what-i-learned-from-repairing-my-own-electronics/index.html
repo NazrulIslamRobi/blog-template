@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from anam.co/what-i-learned-from-repairing-my-own-electronics/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 26 Jan 2022 09:53:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>How I replaced the keyboard and cooling fan of a MacBook air, and learned from it.</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="../assets/built/screen4124.css?v=cfe2113eef" />
+
+    <link rel="shortcut icon" href="../favicon.png" type="image/png" />
+    <link rel="canonical" href="https://blog.anam.co/what-i-learned-from-repairing-my-own-electronics/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <link rel="amphtml" href="https://blog.anam.co/what-i-learned-from-repairing-my-own-electronics/amp/" />
+    
+    <meta property="og:site_name" content="Anam&#x27;s Blog" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="How I replaced the keyboard and cooling fan of a MacBook air, and learned from it." />
+    <meta property="og:description" content="There&#x27;s a channel in Youtube, Jerry Rig Everything. The tagline for the channel is: Life is a DIY Project , I really believe so. When I was a kid, I used to wait for my toys to break (Full disclosure: I used to try and break them) so that I can" />
+    <meta property="og:url" content="https://blog.anam.co/what-i-learned-from-repairing-my-own-electronics/" />
+    <meta property="og:image" content="../../blog.anam.co/content/images/2018/06/blogcover.jpg" />
+    <meta property="article:published_time" content="2018-06-29T22:55:42.000Z" />
+    <meta property="article:modified_time" content="2018-11-28T05:09:23.000Z" />
+    <meta property="article:tag" content="electronics" />
+    <meta property="article:tag" content="diy" />
+    <meta property="article:tag" content="english" />
+    
+    <meta property="article:publisher" content="https://www.facebook.com/theanam" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="How I replaced the keyboard and cooling fan of a MacBook air, and learned from it." />
+    <meta name="twitter:description" content="There&#x27;s a channel in Youtube, Jerry Rig Everything. The tagline for the channel is: Life is a DIY Project , I really believe so. When I was a kid, I used to wait for my toys to break (Full disclosure: I used to try and break them) so that I can" />
+    <meta name="twitter:url" content="https://blog.anam.co/what-i-learned-from-repairing-my-own-electronics/" />
+    <meta name="twitter:image" content="../../blog.anam.co/content/images/2018/06/blogcover.jpg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Anam Ahmed" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="electronics, diy, english" />
+    <meta name="twitter:site" content="@mranam" />
+    <meta property="og:image:width" content="1146" />
+    <meta property="og:image:height" content="576" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Anam&#x27;s Blog",
+        "logo": "https://blog.anam.co/content/images/2018/06/bloglogo-1.png"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Anam Ahmed",
+        "image": {
+            "@type": "ImageObject",
+            "url": "//www.gravatar.com/avatar/768b02b94182c64b0cc4bbeedcca49f9?s=250&d=mm&r=x",
+            "width": 250,
+            "height": 250
+        },
+        "url": "https://blog.anam.co/author/anam/",
+        "sameAs": []
+    },
+    "headline": "How I replaced the keyboard and cooling fan of a MacBook air, and learned from it.",
+    "url": "https://blog.anam.co/what-i-learned-from-repairing-my-own-electronics/",
+    "datePublished": "2018-06-29T22:55:42.000Z",
+    "dateModified": "2018-11-28T05:09:23.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://blog.anam.co/content/images/2018/06/blogcover.jpg",
+        "width": 1146,
+        "height": 576
+    },
+    "keywords": "electronics, diy, english",
+    "description": "There&#x27;s a channel in Youtube, Jerry Rig Everything. The tagline for the channel is: Life is a DIY Project , I really believe so. When I was a kid, I used to wait for my toys to break (Full disclosure: I used to try and break them) so that I can",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.anam.co/"
+    }
+}
+    </script>
+
+    <script src="../public/ghost-sdk.min4124.js?v=cfe2113eef"></script>
+<script>
+ghost.init({
+	clientId: "ghost-frontend",
+	clientSecret: "105460a4bc06"
+});
+</script>
+    <meta name="generator" content="Ghost 2.28" />
+    <link rel="alternate" type="application/rss+xml" title="Anam&#x27;s Blog" href="https://blog.anam.co/rss/" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-9646061-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-9646061-2');
+</script>
+
+</head>
+<body class="post-template tag-electronics tag-diy tag-english">
+
+    <div class="site-wrapper">
+
+        
+
+<header class="site-header outer">
+    <div class="inner">
+        <nav class="site-nav">
+    <div class="site-nav-left">
+                <a class="site-nav-logo" href="https://blog.anam.co/"><img src="../content/images/2018/06/bloglogo-1.png" alt="Anam&#x27;s Blog" /></a>
+            <ul class="nav" role="menu">
+    <li class="nav-home" role="menuitem"><a href="https://blog.anam.co/">Home</a></li>
+    <li class="nav-linux" role="menuitem"><a href="https://blog.anam.co/tag/linux/">Linux</a></li>
+    <li class="nav-containers" role="menuitem"><a href="https://blog.anam.co/tag/docker/">Containers</a></li>
+    <li class="nav-baanlaa" role="menuitem"><a href="https://blog.anam.co/tag/bangla-2/">বাংলা</a></li>
+    <li class="nav-my-github" role="menuitem"><a href="https://github.com/theanam/">My Github</a></li>
+    <li class="nav-my-linkedin" role="menuitem"><a href="https://linkedin.com/in/theanam/">My Linkedin</a></li>
+</ul>
+
+    </div>
+    <div class="site-nav-right">
+        <div class="social-links">
+                <a class="social-link social-link-fb" href="https://www.facebook.com/theanam" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+</a>
+                <a class="social-link social-link-tw" href="https://twitter.com/mranam" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+</a>
+        </div>
+            <a class="rss-button" href="https://feedly.com/i/subscription/feed/https://blog.anam.co/rss/" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="6.18" cy="17.82" r="2.18"/><path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/></svg>
+</a>
+    </div>
+</nav>
+    </div>
+</header>
+
+
+<main id="site-main" class="site-main outer">
+    <div class="inner">
+
+        <article class="post-full post tag-electronics tag-diy tag-english ">
+
+            <header class="post-full-header">
+                <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime="2018-06-30">30 June 2018</time>
+                        <span class="date-divider">/</span> <a href="../tag/electronics/index.html">electronics</a>
+                </section>
+                <h1 class="post-full-title">How I replaced the keyboard and cooling fan of a MacBook air, and learned from it.</h1>
+            </header>
+
+            <figure class="post-full-image" style="background-image: url(../content/images/2018/06/blogcover.jpg)">
+            </figure>
+
+            <section class="post-full-content">
+                <div class="post-content">
+                    <p>There's a channel in Youtube, <a href="https://www.youtube.com/user/JerryRigEverything">Jerry Rig Everything</a>. The tagline for the channel is: <em>Life is a DIY Project</em> , I really believe so. When I was a kid, I used to wait for my toys to break (Full disclosure: I used to try and break them) so that I can take them apart with my trusty Philips head screwdriver and salvage the parts.The DC motor was my favourite.</p><p>I also have a problem, I am a slow learner and bad at following instructions. For example: <strong>I bricked my phone several times trying to root it.</strong> only because I did not know how rooting works. Whatever I do, whatever I use, I have to know it's inner workings, otherwise I will definitely be bad at it. Now for the real story, I recently replaced the keyboard of a 2011 MacBook Air 11 Inch. It's not a big deal for two types of people: </p><ol><li>Who does it everyday, the experts. </li><li>Who doesn't know how complex a MacBook keyboard replacement can be (you are about to find out)</li></ol><p>But for someone like me, who collects multi bit Screwdrivers as hobby, It's a big achievement. In fact: I am writing this post with the replaced keyboard. </p><p>Here's how it began: I needed an extra laptop.Preferably mac, and must be 11 inch model for portability. I found one easily but the condition was really bad. It was not powering up when I received it.</p><p>So , the very fist problem I had to solve is to get it powered on. I thought the problem must be either the battery or the charger. I opened up the mac and visually inspected the battery and power supply circuitry, which looked fine. So I turned my attention towards the charger. which looked like a cholera patient. I tested the power connectors for short circuits, because it's a very common thing with MagSafe chargers. But there was no short circuit. So I opened the charger up, and found out that the cable is broken. Ordering a new cable would take a very long time, so I cut off the faulty part from the cable and Soldered it back with the charger. With a bit of heat shrinking tubes, and superglue, the charger was alive and good looking again.</p><figure class="kg-image-card"><img src="../content/images/2018/06/IMG_20180609_070033--1-.jpg" class="kg-image"><figcaption>This is how the charger looked after the treatment</figcaption></figure><p>So, the Mac turned on. And once it got power, I immediately noticed that the <strong>fan makes a very loud noise. </strong>Then I installed High Sierra, and tried stressing the CPU. Wanted o run some benchmark app but it turns out, a few tabs on Google Chrome also does the job. the fan performance was bad. </p><p>Then I checked the other hardware, and found out that the keyboard was faulty. the buttons L, = and ~ was not working. I tried cleaning the keys, but that made things worse. the buttons did not work, but once in a while, the letter L kept popping up.</p><p>So I ordered a replacement<strong> keyboard</strong>, a <strong>cooling fan</strong> and a new <strong>screwdriver set</strong> in <a href="https://backpackbang.com/r/1000005016">Backpack</a> and waited for a week. after arrived, I looked up the upper body replacement guide for my version of mac on ifixit, and followed along. </p><p>The instructions were really clear, but the repair was extremely painful and required full attention, but the process was repetative, it was more like <strong>I see screw, I open screw. </strong>Once the keyboard was the only thing attached on the unibody. I had to use some serious destructive force to remove the old keyboard. </p><figure class="kg-image-card"><img src="../content/images/2018/06/IMG_20180626_234900.jpg" class="kg-image"><figcaption>The frame with the keyboard removed</figcaption></figure><p>The keyboard was attached with the frame with many tiny rivets. Some of them break off with the frame. So I had to use a flush trim cable cutter(Cable Snip) to remove them one by one. Then I replaced it with the new keyboard. Now comes the tiring part, putting back the new keyboard. the replacement keyboard came with 80 tiny screws and all of them needed to put one by one. Most of them were self threading, as they replaced the rivets. This job was extremely tiring and took two hours to complete.</p><figure class="kg-image-card"><img src="../content/images/2018/06/Screen-Shot-2018-06-30-at-4.27.00-AM.png" class="kg-image"><figcaption>One screw goes into each hole</figcaption></figure><p>Then I started the reassembly. I just had to follow the ifixit guide in the reverse order. I installed the replacement fan while reassembling, and then gradually put everything back together. I did a dry-run to check if everything works fine and put back the back cover. </p><figure class="kg-image-card"><img src="../content/images/2018/06/Screen-Shot-2018-06-30-at-4.41.49-AM.png" class="kg-image"><figcaption>The final result</figcaption></figure><p>The mac was back together and everything worked completely fine. I had to open it to change the double sided tape that I used put back the two speakers, because that added an extra bulk and the back cover was very tight.</p><p>I used to be afraid of opening Macs, working on this mac helped me understand macs better. But this might not have been a happy ending. So, if you want to repair your own electronics, do some practise first, it's not that hard 🤞</p><h4 id="update-">Update:</h4><p>Recently, I went to a hardware store and bought a good quality contact cleaner (almost half the cost of the replacement fan). I sprayed the old fan really well (just for the sake of science) with the contact cleaner and let it dry. And once it dried, installed it back in the mac to see what happened (At this point, This has become a fun game for me). And to my surprise! the fan was fixed. So if your fan is underperforming, you might wanna buy some contact cleaner, remove the fan, spray it properly, let it dry and install it back. It might just work and save you some money and time.</p>
+                </div>
+            </section>
+            <section class="disqus-comments post-full-content">
+                <style>
+                    .disqus-comments.post-full-content::before {
+                        display: none;
+                    }
+            
+                    .disqus-comments.post-full-content::after {
+                        display: none;
+                    }
+                </style>
+            
+                <div id="disqus_thread"></div>
+                <script>
+
+                    /**
+                    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+                    var disqus_config = function () {
+                        //this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                        this.page.identifier = "ghost-5b33f0bd3672350001f191f9"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    };
+                    (function () { // DON'T EDIT BELOW THIS LINE
+                        var d = document, s = d.createElement('script');
+                        s.src = '../../anamsblog.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the
+                    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+                </noscript>
+            </section>
+
+            <footer class="post-full-footer">
+
+
+                    
+<section class="author-card">
+        <img class="author-profile-image" src="http://www.gravatar.com/avatar/768b02b94182c64b0cc4bbeedcca49f9?s=250&amp;d=mm&amp;r=x" alt="Anam Ahmed" />
+    <section class="author-card-content">
+        <h4 class="author-card-name"><a href="../author/anam/index.html">Anam Ahmed</a></h4>
+            <p>Read <a href="../author/anam/index.html">more posts</a> by this author.</p>
+    </section>
+</section>
+<div class="post-full-footer-right">
+    <a class="author-card-button" href="../author/anam/index.html">Read More</a>
+</div>
+
+
+            </footer>
+
+
+        </article>
+
+    </div>
+</main>
+
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+                <article class="read-next-card"
+                            style="background-image: url(../../casper.ghost.org/v1.0.0/images/blog-cover.jpg)"
+                >
+                    <header class="read-next-card-header">
+                        <small class="read-next-card-header-sitetitle">&mdash; Anam&#x27;s Blog &mdash;</small>
+                        <h3 class="read-next-card-header-title"><a href="../tag/electronics/index.html">electronics</a></h3>
+                    </header>
+                    <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
+</div>
+                    <div class="read-next-card-content">
+                        <ul>
+                            <li><a href="../my-brand-new-ac-compressor-was-frequently-turning-off-the-room-was-not-cool-enough-and-i-learned-from-it/index.html">My brand new AC compressor was frequently turning off. The room was not cool enough. And I learned from it.</a></li>
+                        </ul>
+                    </div>
+                    <footer class="read-next-card-footer">
+                        <a href="../tag/electronics/index.html">1 post →</a>
+                    </footer>
+                </article>
+
+                <article class="post-card post tag-electronics tag-experience tag-story tag-air-conditioner tag-diy-fix tag-english">
+        <a class="post-card-image-link" href="../my-brand-new-ac-compressor-was-frequently-turning-off-the-room-was-not-cool-enough-and-i-learned-from-it/index.html">
+            <div class="post-card-image" style="background-image: url(https://images.unsplash.com/photo-1513354135506-5d455b8d752f?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjExNzczfQ&amp;s=6b6ee745473cce6959fb5360a0f9a1a6)"></div>
+        </a>
+    <div class="post-card-content">
+        <a class="post-card-content-link" href="../my-brand-new-ac-compressor-was-frequently-turning-off-the-room-was-not-cool-enough-and-i-learned-from-it/index.html">
+            <header class="post-card-header">
+                    <span class="post-card-tags">electronics</span>
+                <h2 class="post-card-title">My brand new AC compressor was frequently turning off. The room was not cool enough. And I learned from it.</h2>
+            </header>
+            <section class="post-card-excerpt">
+                <p>Air conditioners suffer from a problem called "Short cycling" when the compressor frequently turns itself off. I recently bought another split type air conditioner and it had this problem from the very beginning.</p>
+            </section>
+        </a>
+        <footer class="post-card-meta">
+
+            <ul class="author-list">
+                <li class="author-list-item">
+
+                    <div class="author-name-tooltip">
+                        Anam Ahmed
+                    </div>
+
+                        <a href="../author/anam/index.html" class="static-avatar"><img class="author-profile-image" src="http://www.gravatar.com/avatar/768b02b94182c64b0cc4bbeedcca49f9?s=250&amp;d=mm&amp;r=x" alt="Anam Ahmed" /></a>
+                </li>
+            </ul>
+
+            <span class="reading-time">5 min read</span>
+
+        </footer>
+    </div>
+</article>
+
+                <article class="post-card post tag-linux tag-firewall tag-devops tag-english">
+        <a class="post-card-image-link" href="../an-uncomplicated-introduction-to-firewall-in-linux/index.html">
+            <div class="post-card-image" style="background-image: url(https://images.unsplash.com/photo-1516798600250-395dc1e37e17?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjExNzczfQ&amp;s=24a2b4bff96f90040dace36faf3ab631)"></div>
+        </a>
+    <div class="post-card-content">
+        <a class="post-card-content-link" href="../an-uncomplicated-introduction-to-firewall-in-linux/index.html">
+            <header class="post-card-header">
+                    <span class="post-card-tags">linux</span>
+                <h2 class="post-card-title">An uncomplicated introduction to Firewall in linux(UFW on Ubuntu)</h2>
+            </header>
+            <section class="post-card-excerpt">
+                <p>When I heard the name Firewall for computer network, I imagined it to be a protective layer that destroys anything harmful in the transport. Like a wall of actual fire (please don't judge</p>
+            </section>
+        </a>
+        <footer class="post-card-meta">
+
+            <ul class="author-list">
+                <li class="author-list-item">
+
+                    <div class="author-name-tooltip">
+                        Anam Ahmed
+                    </div>
+
+                        <a href="../author/anam/index.html" class="static-avatar"><img class="author-profile-image" src="http://www.gravatar.com/avatar/768b02b94182c64b0cc4bbeedcca49f9?s=250&amp;d=mm&amp;r=x" alt="Anam Ahmed" /></a>
+                </li>
+            </ul>
+
+            <span class="reading-time">3 min read</span>
+
+        </footer>
+    </div>
+</article>
+
+        </div>
+    </div>
+</aside>
+
+<div class="floating-header">
+    <div class="floating-header-logo">
+        <a href="https://blog.anam.co/">
+                <img src="../content/images/2018/06/blogfav-1.png" alt="Anam&#x27;s Blog icon" />
+            <span>Anam&#x27;s Blog</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">How I replaced the keyboard and cooling fan of a MacBook air, and learned from it.</div>
+    <div class="floating-header-share">
+        <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
+</svg>
+</div>
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=How%20I%20replaced%20the%20keyboard%20and%20cooling%20fan%20of%20a%20MacBook%20air%2C%20and%20learned%20from%20it.&amp;url=https://blog.anam.co/what-i-learned-from-repairing-my-own-electronics/"
+            onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+        </a>
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.anam.co/what-i-learned-from-repairing-my-own-electronics/"
+            onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+        </a>
+    </div>
+    <progress id="reading-progress" class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+
+
+
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="https://blog.anam.co/">Anam&#x27;s Blog</a> &copy; 2022</section>
+                <nav class="site-footer-nav">
+                    <a href="https://blog.anam.co/">Latest Posts</a>
+                    <a href="https://www.facebook.com/theanam" target="_blank" rel="noopener">Facebook</a>
+                    <a href="https://twitter.com/mranam" target="_blank" rel="noopener">Twitter</a>
+                    <a href="https://ghost.org/" target="_blank" rel="noopener">Ghost</a>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+
+    <script
+        src="../../code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="../assets/js/jquery.fitvids4124.js?v=cfe2113eef"></script>
+
+
+    <script>
+
+// NOTE: Scroll performance is poor in Safari
+// - this appears to be due to the events firing much more slowly in Safari.
+//   Dropping the scroll event and using only a raf loop results in smoother
+//   scrolling but continuous processing even when not scrolling
+$(document).ready(function () {
+    // Start fitVids
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    // End fitVids
+
+    var progressBar = document.querySelector('#reading-progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        // show/hide floating header
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+
+});
+</script>
+
+
+    
+
+</body>
+
+<!-- Mirrored from anam.co/what-i-learned-from-repairing-my-own-electronics/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 26 Jan 2022 09:53:43 GMT -->
+</html>

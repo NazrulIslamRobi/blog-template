@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from anam.co/css-rem-em-vw-vh-calc/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 26 Jan 2022 09:53:37 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>সি এস এস এর নতুন কিছু ইউনিট rem, em, vw vh আর calc() ফাংশন পরিচিতি</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="../assets/built/screen4124.css?v=cfe2113eef" />
+
+    <link rel="shortcut icon" href="../favicon.png" type="image/png" />
+    <link rel="canonical" href="https://blog.anam.co/css-rem-em-vw-vh-calc/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <link rel="amphtml" href="https://blog.anam.co/css-rem-em-vw-vh-calc/amp/" />
+    
+    <meta property="og:site_name" content="Anam&#x27;s Blog" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="সি এস এস এর নতুন কিছু ইউনিট rem, em, vw vh আর calc() ফাংশন পরিচিতি" />
+    <meta property="og:description" content="রেস্পন্সিভ ওয়েব এখনকার খুব কমন একটা চাহিদা । কোন একটা অদ্ভুত কারনে রেস্পন্সিভ ওয়েব ব্যপারটা যতটা সহজ হওয়ার কথা ততটা সহজ নয়। সবারই রেস্পন্সিভ ওয়ে" />
+    <meta property="og:url" content="https://blog.anam.co/css-rem-em-vw-vh-calc/" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjExNzczfQ&amp;s=77546dbfa09c42bd14d26ef016226131" />
+    <meta property="article:published_time" content="2015-11-25T00:17:00.000Z" />
+    <meta property="article:modified_time" content="2018-07-17T11:00:11.000Z" />
+    <meta property="article:tag" content="css" />
+    <meta property="article:tag" content="unit" />
+    <meta property="article:tag" content="responsive" />
+    <meta property="article:tag" content="web design" />
+    <meta property="article:tag" content="bangla" />
+    <meta property="article:tag" content="বাংলা" />
+    
+    <meta property="article:publisher" content="https://www.facebook.com/theanam" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="সি এস এস এর নতুন কিছু ইউনিট rem, em, vw vh আর calc() ফাংশন পরিচিতি" />
+    <meta name="twitter:description" content="রেস্পন্সিভ ওয়েব এখনকার খুব কমন একটা চাহিদা । কোন একটা অদ্ভুত কারনে রেস্পন্সিভ ওয়েব ব্যপারটা যতটা সহজ হওয়ার কথা ততটা সহজ নয়। সবারই রেস্পন্সিভ ওয়ে" />
+    <meta name="twitter:url" content="https://blog.anam.co/css-rem-em-vw-vh-calc/" />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjExNzczfQ&amp;s=77546dbfa09c42bd14d26ef016226131" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Anam Ahmed" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="css, unit, responsive, web design, bangla, বাংলা" />
+    <meta name="twitter:site" content="@mranam" />
+    <meta property="og:image:width" content="1080" />
+    <meta property="og:image:height" content="720" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Anam&#x27;s Blog",
+        "logo": "https://blog.anam.co/content/images/2018/06/bloglogo-1.png"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Anam Ahmed",
+        "image": {
+            "@type": "ImageObject",
+            "url": "//www.gravatar.com/avatar/768b02b94182c64b0cc4bbeedcca49f9?s=250&d=mm&r=x",
+            "width": 250,
+            "height": 250
+        },
+        "url": "https://blog.anam.co/author/anam/",
+        "sameAs": []
+    },
+    "headline": "সি এস এস এর নতুন কিছু ইউনিট rem, em, vw vh আর calc() ফাংশন পরিচিতি",
+    "url": "https://blog.anam.co/css-rem-em-vw-vh-calc/",
+    "datePublished": "2015-11-25T00:17:00.000Z",
+    "dateModified": "2018-07-17T11:00:11.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ&s=77546dbfa09c42bd14d26ef016226131",
+        "width": 1080,
+        "height": 720
+    },
+    "keywords": "css, unit, responsive, web design, bangla, বাংলা",
+    "description": "রেস্পন্সিভ ওয়েব এখনকার খুব কমন একটা চাহিদা । কোন একটা অদ্ভুত কারনে রেস্পন্সিভ ওয়েব ব্যপারটা যতটা সহজ হওয়ার কথা ততটা সহজ নয়। সবারই রেস্পন্সিভ ওয়ে",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.anam.co/"
+    }
+}
+    </script>
+
+    <script src="../public/ghost-sdk.min4124.js?v=cfe2113eef"></script>
+<script>
+ghost.init({
+	clientId: "ghost-frontend",
+	clientSecret: "105460a4bc06"
+});
+</script>
+    <meta name="generator" content="Ghost 2.28" />
+    <link rel="alternate" type="application/rss+xml" title="Anam&#x27;s Blog" href="https://blog.anam.co/rss/" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-9646061-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-9646061-2');
+</script>
+
+</head>
+<body class="post-template tag-css tag-unit tag-responsive tag-web-design tag-bangla tag-bangla-2">
+
+    <div class="site-wrapper">
+
+        
+
+<header class="site-header outer">
+    <div class="inner">
+        <nav class="site-nav">
+    <div class="site-nav-left">
+                <a class="site-nav-logo" href="https://blog.anam.co/"><img src="../content/images/2018/06/bloglogo-1.png" alt="Anam&#x27;s Blog" /></a>
+            <ul class="nav" role="menu">
+    <li class="nav-home" role="menuitem"><a href="https://blog.anam.co/">Home</a></li>
+    <li class="nav-linux" role="menuitem"><a href="https://blog.anam.co/tag/linux/">Linux</a></li>
+    <li class="nav-containers" role="menuitem"><a href="https://blog.anam.co/tag/docker/">Containers</a></li>
+    <li class="nav-baanlaa" role="menuitem"><a href="https://blog.anam.co/tag/bangla-2/">বাংলা</a></li>
+    <li class="nav-my-github" role="menuitem"><a href="https://github.com/theanam/">My Github</a></li>
+    <li class="nav-my-linkedin" role="menuitem"><a href="https://linkedin.com/in/theanam/">My Linkedin</a></li>
+</ul>
+
+    </div>
+    <div class="site-nav-right">
+        <div class="social-links">
+                <a class="social-link social-link-fb" href="https://www.facebook.com/theanam" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+</a>
+                <a class="social-link social-link-tw" href="https://twitter.com/mranam" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+</a>
+        </div>
+            <a class="rss-button" href="https://feedly.com/i/subscription/feed/https://blog.anam.co/rss/" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="6.18" cy="17.82" r="2.18"/><path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/></svg>
+</a>
+    </div>
+</nav>
+    </div>
+</header>
+
+
+<main id="site-main" class="site-main outer">
+    <div class="inner">
+
+        <article class="post-full post tag-css tag-unit tag-responsive tag-web-design tag-bangla tag-bangla-2 ">
+
+            <header class="post-full-header">
+                <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime="2015-11-25">25 November 2015</time>
+                        <span class="date-divider">/</span> <a href="../tag/css/index.html">css</a>
+                </section>
+                <h1 class="post-full-title">সি এস এস এর নতুন কিছু ইউনিট rem, em, vw vh আর calc() ফাংশন পরিচিতি</h1>
+            </header>
+
+            <figure class="post-full-image" style="background-image: url(https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjExNzczfQ&amp;s=77546dbfa09c42bd14d26ef016226131)">
+            </figure>
+
+            <section class="post-full-content">
+                <div class="post-content">
+                    <p>রেস্পন্সিভ ওয়েব এখনকার খুব কমন একটা চাহিদা । কোন একটা অদ্ভুত কারনে রেস্পন্সিভ ওয়েব ব্যপারটা যতটা সহজ হওয়ার কথা ততটা সহজ নয়। সবারই রেস্পন্সিভ ওয়েব ডিজাইন করার ব্যপারে আলাদা আলাদা স্টাইল আছে। আজকে রেস্পন্সিভ ডিজাইন নিয়েই লিখবো, তবে হয়ত খুব কম ব্যবহৃত কিছু ইউনিট আর ট্রিক নিয়ে আলোচনা করবো, সবাই সহজ গুলো দিয়ে শুরু করে, আমি কঠিনটা দিয়ে শুরু করি।</p>
+<h2 id="calc">calc() ফাংশন :</h2>
+<p>CSS এ আবার ফাংশন!! মশকরা করেন? হুম ফাংশনই আছে তো। এই যেমন ধরেন <code>linear-gradient, radial-gradient</code> এগুলোকে ফাংশন হিসেবেই বিবেচনা করতে পারেন, তেমনি একটা ফাংশন <code>calc()</code> তো এইটা কি করে? নাম শুনে কি মনে হয়? হুম যেটা মনে হয় সেটাই করে। খুব সহজ ভাষায় বলতে গেলে এই ফাংশনের মধ্যে হিসাব নিকাশ করতে পারবেন। মজার না? আপনি হয়ত ভাবছেন আমি তো less/sass ব্যবহার করি, ঐটাতে তো প্রাচীনকাল থেকে হিসাব নিকাশ করা যায়। হুম কথা সত্য, কিন্তু ব্যপার হচ্ছে, আপনি কি এগুলোতে <strong>%</strong> থেকে <strong>px</strong> বাদ দিয়ে হিসেব করতে পারবেন? নাহ মনেহয়, সেগুলোতে আলাদা ইউনিটের মধ্যে হিসাব করা যায়না। আবার ধরেন আপনি যখন এই আর্টিকেল পড়ছেন, ততদিনে এই ফিচারও চলে আসছে, আমার ধারনা ততদিনে <code>calc()</code> ফাংশনের ব্রাউজার সাপোর্ট অনেক বেশী ভালো হয়ে গেছে।  যাই হোক এটা দিয়ে আপনি <code>+ , - , * , /</code> চারটাই করতে পারবেন। আর এই ফাংশন বেশীভাগ সংখ্যা ভিত্তিক প্রোপার্টির জন্য কাজ করবে।  আর এর সিনট্যক্স কিছুটা এরকম :</p>
+<pre><code>  height:calc(100% - 20px); 
+</code></pre>
+<p>বোঝার সুবিধার জন্য <code>height</code> প্রোপার্টি দিয়ে স্যম্পল দেখিয়েছি, একটা জিনিস খেয়াল করেন, মাইনাস এর আগে পিছে <strong>দুইটা স্পেস</strong> আছে, এই স্পেস গুলো না দিয়ে কোড করার পর কোড কাজ না করলে আমার দোষ নাই। নীচে পুরো একটা উদাহরন দেয়া আছে, <code>calc()</code> ব্যবহার করে একটা <code>div</code> কে পুরোপুরি সেন্টারে আনা হয়েছে।</p>
+<!--calc sample codepen -->
+<p data-height="268" data-theme-id="0" data-slug-hash="ujrAp" data-default-tab="result" class='codepen'>See the Pen <a href="https://codepen.io/theanam/pen/ujrAp/">ujrAp</a> by Anam Ahmed (<a href="https://codepen.io/theanam">@theanam</a>) on <a href="https://codepen.io/">CodePen</a>.</p>
+<script async src="../../static.codepen.io/assets/embed/ei.js"></script>
+<p>calc() এখনকার সব আধুনিক ব্রাউজার সাপোর্ট করে, আরো বিস্তারিত সাপোর্ট ইনফরমেশন পাবেন <a href="https://caniuse.com/calc">caniuse.com</a> এ।</p>
+<h2 id="emrem">em এবং rem:</h2>
+<p>em আর rem এই দুইটা ইউনিট সরাসরি ফন্ট সাইজের সাথে সম্পর্কিত। এবং মজার বিষয় হচ্ছে, দুইটাই আপেক্ষিক ফন্ট সাইজ। em নিয়ে আগে বলি, ধরেন আপনার একটা <code>&lt;div&gt;</code> এর মধ্যে একটা <code>&lt;p&gt;</code> আছে, এখন আপনার div টার font-size যদি আপনি 15px ঠিক করে দেন, তাহলে, আপনি যখন p টার ফন্ট সাইজ ঠিক করতে চাইবেন, তখন তা ‍‍‍‍‍<code>font-size:1em</code> দিলে, আপনার p টারও ফন্ট সাইজ ১৫ পিক্সেল হবে, বলেন তো, 2em দিলে কি হবে? হুম ঠিক ধরেছেন, ৩০ পিক্সেল হবে! 3em, দিলে ৪৫ পিক্সেল। তাইলে বুঝেই গেছেন, em অর্থ প্যরেন্ট এলিমেন্ট এর ফন্ট সাইজের চেয়ে কতটা বড় বা ছোট। তবে এই ইউনিট যে শুধু ফন্ট সাইজের প্রোপার্টিতে কাজ করবে তা কিন্তু নয়, যেখানে px কাজ করে, প্রায় সব যায়গাতেই কাজ করতে, মানে ধরেন আপনি এমনটা যদি লিখেন, <code>height:2em</code> তাহলে কোনই ভুল হবেনা।</p>
+<p>এখন আসি rem নিয়ে, r মানে রুট, আর বাকী সবকিছুই em এর মত, মানে em এ যেমন প্যরেন্ট এলিমেন্টের ফন্ট সাইজের সাথে সম্পর্কিত ছিল, এটা একেবারে রুট এলিমেন্ট মানে <code>&lt;html&gt;</code> এর ফন্ট সাইজের সাথে সম্পর্কিত। একবার শুধু ফন্ট সাইজ ঠিক করে দিয়ে পুরো ডকুমেন্টে আরামে rem ব্যবহার করতে পারবেন, যতবার ইচ্ছা ততবার, কেও মানা করতে আমাকে ডাক দিবেন :p । আর মিডিয়া কুয়েরী দিয়ে স্ক্রিন সাইজ অনুযায়ী কয়েক্টা আলাদা ফন্ট সাইজ সেট করে দিতে পারলেই চমতকার রেসপন্সিভ টাইপোগ্রাফি হয়ে যাবে। নীচের স্যম্পল আপনাদের বুঝতে সাহায্য করবে :</p>
+<!--rem em sample -->
+<p data-height="268" data-theme-id="0" data-slug-hash="pxqGk" data-default-tab="result" class='codepen'>See the Pen <a href="https://codepen.io/theanam/pen/pxqGk/">pxqGk</a> by Anam Ahmed (<a href="https://codepen.io/theanam">@theanam</a>) on <a href="https://codepen.io/">CodePen</a>.</p>
+<script async src="../../static.codepen.io/assets/embed/ei.js"></script>
+<h2 id="vwvh">vw আর vh :</h2>
+<p>v মানে ভিউপোর্ট (মানে ব্রাউজারের যতটুকু অংশে আপনার ওয়েবপেজ দেখা যায়) আর w = width, h = height ওকে, অনেকটাই মনে হয় বুঝাতে পেরেছি তাইনা, আচ্ছা আরো একটু পরিস্কার করে বলি, <code>vw</code> আর <code>vh</code> আপনার ব্রাউজার স্ক্রিনের width আর height, 100vw মানে পুরো ব্রাউজার width আর 100vh মানে পুরো ব্রাউজারের height.নীচের স্যম্পল কোড দেখলে ব্যপারটা আরো পরিস্কার হবে।</p>
+<!-- vw and vh -->
+<p data-height="268" data-theme-id="0" data-slug-hash="nwgxl" data-default-tab="result" class='codepen'>See the Pen <a href="https://codepen.io/theanam/pen/nwgxl/">nwgxl</a> by Anam Ahmed (<a href="https://codepen.io/theanam">@theanam</a>) on <a href="https://codepen.io/">CodePen</a>.</p>
+<script async src="../../static.codepen.io/assets/embed/ei.js"></script>
+<p>একটা বক্সকে পুরোপুরি মাঝখানে আনা হয়েছে, vw আর vh ব্যবহার করে, এবং তা সবসময় উইন্ডো সাইজের অর্ধেক থাকবে।</p>
+<blockquote>
+<p>এই নতুন ইউনিট আর ফাংশনগুলোর ব্রাউজার সাপোর্ট বেশ ভালো হলেও, ফলব্যক দিতে ভুলবেন না। যদি কোন কারনে কাজ না করে, আপনার সাইট যেন যথেষ্ট ভদ্র দেখায় এমন ব্যবস্থা করে রাখুন।</p>
+</blockquote>
+
+                </div>
+            </section>
+            <section class="disqus-comments post-full-content">
+                <style>
+                    .disqus-comments.post-full-content::before {
+                        display: none;
+                    }
+            
+                    .disqus-comments.post-full-content::after {
+                        display: none;
+                    }
+                </style>
+            
+                <div id="disqus_thread"></div>
+                <script>
+
+                    /**
+                    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+                    var disqus_config = function () {
+                        //this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                        this.page.identifier = "ghost-5b3034762477490001b5edb5"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    };
+                    (function () { // DON'T EDIT BELOW THIS LINE
+                        var d = document, s = d.createElement('script');
+                        s.src = '../../anamsblog.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the
+                    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+                </noscript>
+            </section>
+
+            <footer class="post-full-footer">
+
+
+                    
+<section class="author-card">
+        <img class="author-profile-image" src="http://www.gravatar.com/avatar/768b02b94182c64b0cc4bbeedcca49f9?s=250&amp;d=mm&amp;r=x" alt="Anam Ahmed" />
+    <section class="author-card-content">
+        <h4 class="author-card-name"><a href="../author/anam/index.html">Anam Ahmed</a></h4>
+            <p>Read <a href="../author/anam/index.html">more posts</a> by this author.</p>
+    </section>
+</section>
+<div class="post-full-footer-right">
+    <a class="author-card-button" href="../author/anam/index.html">Read More</a>
+</div>
+
+
+            </footer>
+
+
+        </article>
+
+    </div>
+</main>
+
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+                <article class="read-next-card"
+                            style="background-image: url(../../casper.ghost.org/v1.0.0/images/blog-cover.jpg)"
+                >
+                    <header class="read-next-card-header">
+                        <small class="read-next-card-header-sitetitle">&mdash; Anam&#x27;s Blog &mdash;</small>
+                        <h3 class="read-next-card-header-title"><a href="../tag/css/index.html">css</a></h3>
+                    </header>
+                    <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
+</div>
+                    <div class="read-next-card-content">
+                        <ul>
+                            <li><a href="../css-position-sticky-in-bangla/index.html">পজিশন: স্টিকি,আমার হঠাত করে খুঁজে পাওয়া মজার একটা সি এস এস ফিচার</a></li>
+                            <li><a href="../css-scroll-snap-in-bangla/index.html">CSS স্ক্রল স্ন্যাপ। জাভাস্ক্রিপ্ট ছাড়াই স্ক্রল নিয়ন্ত্রন করা</a></li>
+                            <li><a href="../css-variables-introduction/index.html">The brave new world of CSS variables (Custom Properties)</a></li>
+                        </ul>
+                    </div>
+                    <footer class="read-next-card-footer">
+                        <a href="../tag/css/index.html">See all 5 posts →</a>
+                    </footer>
+                </article>
+
+                <article class="post-card post tag-javascript tag-html5 tag-download-api tag-english">
+        <a class="post-card-image-link" href="../providing-a-client-side-download-with-javascript-and-html5/index.html">
+            <div class="post-card-image" style="background-image: url(https://images.unsplash.com/photo-1521623475836-87d82a22184f?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjExNzczfQ&amp;s=ffc8f1d93cbb40d8469da849a8ab7a6f)"></div>
+        </a>
+    <div class="post-card-content">
+        <a class="post-card-content-link" href="../providing-a-client-side-download-with-javascript-and-html5/index.html">
+            <header class="post-card-header">
+                    <span class="post-card-tags">JavaScript</span>
+                <h2 class="post-card-title">Providing a Client side download with JavaScript and HTML5</h2>
+            </header>
+            <section class="post-card-excerpt">
+                <p>The web is changing, Offline web applications are getting popular rapidly. Crazy things are happening in your browser that were only possible on the server before. For example, you can create and manipulate</p>
+            </section>
+        </a>
+        <footer class="post-card-meta">
+
+            <ul class="author-list">
+                <li class="author-list-item">
+
+                    <div class="author-name-tooltip">
+                        Anam Ahmed
+                    </div>
+
+                        <a href="../author/anam/index.html" class="static-avatar"><img class="author-profile-image" src="http://www.gravatar.com/avatar/768b02b94182c64b0cc4bbeedcca49f9?s=250&amp;d=mm&amp;r=x" alt="Anam Ahmed" /></a>
+                </li>
+            </ul>
+
+            <span class="reading-time">4 min read</span>
+
+        </footer>
+    </div>
+</article>
+
+                <article class="post-card post tag-devtool tag-firefox tag-browser tag-english">
+        <a class="post-card-image-link" href="../develop-for-the-browser-inside-the-browser/index.html">
+            <div class="post-card-image" style="background-image: url(https://images.unsplash.com/photo-1504292004442-f285299403fa?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjExNzczfQ&amp;s=6689e34548887c7760dd748a9478ff54)"></div>
+        </a>
+    <div class="post-card-content">
+        <a class="post-card-content-link" href="../develop-for-the-browser-inside-the-browser/index.html">
+            <header class="post-card-header">
+                    <span class="post-card-tags">devtool</span>
+                <h2 class="post-card-title">Develop for the browser, inside the browser</h2>
+            </header>
+            <section class="post-card-excerpt">
+                <p>Developing right from the browser Isn't a new idea. There were a lot of third party tools for this work. Well, things change, our browsers changed too. It's not just your regular web</p>
+            </section>
+        </a>
+        <footer class="post-card-meta">
+
+            <ul class="author-list">
+                <li class="author-list-item">
+
+                    <div class="author-name-tooltip">
+                        Anam Ahmed
+                    </div>
+
+                        <a href="../author/anam/index.html" class="static-avatar"><img class="author-profile-image" src="http://www.gravatar.com/avatar/768b02b94182c64b0cc4bbeedcca49f9?s=250&amp;d=mm&amp;r=x" alt="Anam Ahmed" /></a>
+                </li>
+            </ul>
+
+            <span class="reading-time">3 min read</span>
+
+        </footer>
+    </div>
+</article>
+
+        </div>
+    </div>
+</aside>
+
+<div class="floating-header">
+    <div class="floating-header-logo">
+        <a href="https://blog.anam.co/">
+                <img src="../content/images/2018/06/blogfav-1.png" alt="Anam&#x27;s Blog icon" />
+            <span>Anam&#x27;s Blog</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">সি এস এস এর নতুন কিছু ইউনিট rem, em, vw vh আর calc() ফাংশন পরিচিতি</div>
+    <div class="floating-header-share">
+        <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
+</svg>
+</div>
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%E0%A6%B8%E0%A6%BF%20%E0%A6%8F%E0%A6%B8%20%E0%A6%8F%E0%A6%B8%20%E0%A6%8F%E0%A6%B0%20%E0%A6%A8%E0%A6%A4%E0%A7%81%E0%A6%A8%20%E0%A6%95%E0%A6%BF%E0%A6%9B%E0%A7%81%20%E0%A6%87%E0%A6%89%E0%A6%A8%E0%A6%BF%E0%A6%9F%20rem%2C%20em%2C%20vw%20vh%20%E0%A6%86%E0%A6%B0%20calc()%20%E0%A6%AB%E0%A6%BE%E0%A6%82%E0%A6%B6%E0%A6%A8%20%E0%A6%AA%E0%A6%B0%E0%A6%BF%E0%A6%9A%E0%A6%BF%E0%A6%A4%E0%A6%BF&amp;url=https://blog.anam.co/css-rem-em-vw-vh-calc/"
+            onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+        </a>
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.anam.co/css-rem-em-vw-vh-calc/"
+            onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+        </a>
+    </div>
+    <progress id="reading-progress" class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+
+
+
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="https://blog.anam.co/">Anam&#x27;s Blog</a> &copy; 2022</section>
+                <nav class="site-footer-nav">
+                    <a href="https://blog.anam.co/">Latest Posts</a>
+                    <a href="https://www.facebook.com/theanam" target="_blank" rel="noopener">Facebook</a>
+                    <a href="https://twitter.com/mranam" target="_blank" rel="noopener">Twitter</a>
+                    <a href="https://ghost.org/" target="_blank" rel="noopener">Ghost</a>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+
+    <script
+        src="../../code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="../assets/js/jquery.fitvids4124.js?v=cfe2113eef"></script>
+
+
+    <script>
+
+// NOTE: Scroll performance is poor in Safari
+// - this appears to be due to the events firing much more slowly in Safari.
+//   Dropping the scroll event and using only a raf loop results in smoother
+//   scrolling but continuous processing even when not scrolling
+$(document).ready(function () {
+    // Start fitVids
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    // End fitVids
+
+    var progressBar = document.querySelector('#reading-progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        // show/hide floating header
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+
+});
+</script>
+
+
+    
+
+</body>
+
+<!-- Mirrored from anam.co/css-rem-em-vw-vh-calc/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 26 Jan 2022 09:53:38 GMT -->
+</html>

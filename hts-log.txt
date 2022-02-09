@@ -1,0 +1,21 @@
+HTTrack3.49-2+htsswf+htsjava launched on Wed, 26 Jan 2022 15:53:10 at https://anam.co/?fbclid=IwAR1-ba6bzrfOk1o9uz66tImnfNkNssReW-qD0iDqPNMZVbLw7YqXjp2UG_4 +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://anam.co/?fbclid=IwAR1-ba6bzrfOk1o9uz66tImnfNkNssReW-qD0iDqPNMZVbLw7YqXjp2UG_4 -O1 "D:\Softwares\robi's blog" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+15:53:17	Warning: 	Retry after error -5 (Unable to get server's address: No such host is known. ) at link https://casper.ghost.org/v1.0.0/images/blog-cover.jpg (from https://anam.co/?fbclid=IwAR1-ba6bzrfOk1o9uz66tImnfNkNssReW-qD0iDqPNMZVbLw7YqXjp2UG_4)
+15:53:34	Warning: 	Retry after error -5 (Unable to get server's address: unknown error) at link https://casper.ghost.org/v1.0.0/images/blog-cover.jpg (from https://anam.co/?fbclid=IwAR1-ba6bzrfOk1o9uz66tImnfNkNssReW-qD0iDqPNMZVbLw7YqXjp2UG_4)
+15:53:44	Error: 	"Unable to get server's address: unknown error" (-5) after 2 retries at link https://casper.ghost.org/v1.0.0/images/blog-cover.jpg (from https://anam.co/?fbclid=IwAR1-ba6bzrfOk1o9uz66tImnfNkNssReW-qD0iDqPNMZVbLw7YqXjp2UG_4)
+15:53:49	Warning: 	Link https://anam.co/cdn-cgi/l/email-protection not scanned (follow robots meta tag)
+15:53:50	Error: 	"Not Found" (404) at link https://anam.co/assets/br1.png/ (from https://anam.co/develop-for-the-browser-inside-the-browser/)
+15:53:50	Error: 	"Not Found" (404) at link https://anam.co/assets/br2.png/ (from https://anam.co/develop-for-the-browser-inside-the-browser/)
+15:53:50	Error: 	"Not Found" (404) at link https://anam.co/assets/br3.png/ (from https://anam.co/develop-for-the-browser-inside-the-browser/)
+15:53:50	Error: 	"Not Found" (404) at link https://anam.co/assets/br4.png/ (from https://anam.co/develop-for-the-browser-inside-the-browser/)
+15:53:50	Error: 	"Not Found" (404) at link https://anam.co/assets/bezier1.png/ (from https://anam.co/css-cubic-bezier-simplified/)
+15:53:50	Error: 	"Not Found" (404) at link https://anam.co/assets/bezier2.png/ (from https://anam.co/css-cubic-bezier-simplified/)
+
+HTTrack Website Copier/3.49-2 mirror complete in 40 seconds : 127 links scanned, 117 files written (12041645 bytes overall) [10700033 bytes received at 267500 bytes/sec], 2060286 bytes transferred using HTTP compression in 83 files, ratio 27%, 7.3 requests per connection
+(7 errors, 3 warnings, 0 messages)

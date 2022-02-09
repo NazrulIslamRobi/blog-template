@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from anam.co/migrating-my-blog-from-drupal-to-ghost/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 26 Jan 2022 09:53:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Migrating My Blog from Drupal to Ghost</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="../assets/built/screen4124.css?v=cfe2113eef" />
+
+    <link rel="shortcut icon" href="../favicon.png" type="image/png" />
+    <link rel="canonical" href="https://blog.anam.co/migrating-my-blog-from-drupal-to-ghost/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <link rel="amphtml" href="https://blog.anam.co/migrating-my-blog-from-drupal-to-ghost/amp/" />
+    
+    <meta property="og:site_name" content="Anam&#x27;s Blog" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Migrating My Blog from Drupal to Ghost" />
+    <meta property="og:description" content="I am a Drupal Fan. Most of the CMS related work I did in PHP involved Drupal. So when it was time to make my own blog back in 2013, I chose Drupal without having second thought. Although WordPress was really popular and easier that time, I still went for" />
+    <meta property="og:url" content="https://blog.anam.co/migrating-my-blog-from-drupal-to-ghost/" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1500989145603-8e7ef71d639e?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjExNzczfQ&amp;s=ecb03a017810c4ac4efad4475725773d" />
+    <meta property="article:published_time" content="2018-06-25T01:23:22.000Z" />
+    <meta property="article:modified_time" content="2018-11-28T05:09:46.000Z" />
+    <meta property="article:tag" content="docker" />
+    <meta property="article:tag" content="ghost" />
+    <meta property="article:tag" content="drupal7" />
+    <meta property="article:tag" content="drupal" />
+    <meta property="article:tag" content="english" />
+    
+    <meta property="article:publisher" content="https://www.facebook.com/theanam" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Migrating My Blog from Drupal to Ghost" />
+    <meta name="twitter:description" content="I am a Drupal Fan. Most of the CMS related work I did in PHP involved Drupal. So when it was time to make my own blog back in 2013, I chose Drupal without having second thought. Although WordPress was really popular and easier that time, I still went for" />
+    <meta name="twitter:url" content="https://blog.anam.co/migrating-my-blog-from-drupal-to-ghost/" />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1500989145603-8e7ef71d639e?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjExNzczfQ&amp;s=ecb03a017810c4ac4efad4475725773d" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Anam Ahmed" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="docker, ghost, drupal7, drupal, english" />
+    <meta name="twitter:site" content="@mranam" />
+    <meta property="og:image:width" content="1080" />
+    <meta property="og:image:height" content="715" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Anam&#x27;s Blog",
+        "logo": "https://blog.anam.co/content/images/2018/06/bloglogo-1.png"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Anam Ahmed",
+        "image": {
+            "@type": "ImageObject",
+            "url": "//www.gravatar.com/avatar/768b02b94182c64b0cc4bbeedcca49f9?s=250&d=mm&r=x",
+            "width": 250,
+            "height": 250
+        },
+        "url": "https://blog.anam.co/author/anam/",
+        "sameAs": []
+    },
+    "headline": "Migrating My Blog from Drupal to Ghost",
+    "url": "https://blog.anam.co/migrating-my-blog-from-drupal-to-ghost/",
+    "datePublished": "2018-06-25T01:23:22.000Z",
+    "dateModified": "2018-11-28T05:09:46.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://images.unsplash.com/photo-1500989145603-8e7ef71d639e?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ&s=ecb03a017810c4ac4efad4475725773d",
+        "width": 1080,
+        "height": 715
+    },
+    "keywords": "docker, ghost, drupal7, drupal, english",
+    "description": "I am a Drupal Fan. Most of the CMS related work I did in PHP involved Drupal. So when it was time to make my own blog back in 2013, I chose Drupal without having second thought. Although WordPress was really popular and easier that time, I still went for",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.anam.co/"
+    }
+}
+    </script>
+
+    <script src="../public/ghost-sdk.min4124.js?v=cfe2113eef"></script>
+<script>
+ghost.init({
+	clientId: "ghost-frontend",
+	clientSecret: "105460a4bc06"
+});
+</script>
+    <meta name="generator" content="Ghost 2.28" />
+    <link rel="alternate" type="application/rss+xml" title="Anam&#x27;s Blog" href="https://blog.anam.co/rss/" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-9646061-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-9646061-2');
+</script>
+
+</head>
+<body class="post-template tag-docker tag-ghost-tag tag-drupal7 tag-drupal tag-english">
+
+    <div class="site-wrapper">
+
+        
+
+<header class="site-header outer">
+    <div class="inner">
+        <nav class="site-nav">
+    <div class="site-nav-left">
+                <a class="site-nav-logo" href="https://blog.anam.co/"><img src="../content/images/2018/06/bloglogo-1.png" alt="Anam&#x27;s Blog" /></a>
+            <ul class="nav" role="menu">
+    <li class="nav-home" role="menuitem"><a href="https://blog.anam.co/">Home</a></li>
+    <li class="nav-linux" role="menuitem"><a href="https://blog.anam.co/tag/linux/">Linux</a></li>
+    <li class="nav-containers" role="menuitem"><a href="https://blog.anam.co/tag/docker/">Containers</a></li>
+    <li class="nav-baanlaa" role="menuitem"><a href="https://blog.anam.co/tag/bangla-2/">বাংলা</a></li>
+    <li class="nav-my-github" role="menuitem"><a href="https://github.com/theanam/">My Github</a></li>
+    <li class="nav-my-linkedin" role="menuitem"><a href="https://linkedin.com/in/theanam/">My Linkedin</a></li>
+</ul>
+
+    </div>
+    <div class="site-nav-right">
+        <div class="social-links">
+                <a class="social-link social-link-fb" href="https://www.facebook.com/theanam" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+</a>
+                <a class="social-link social-link-tw" href="https://twitter.com/mranam" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+</a>
+        </div>
+            <a class="rss-button" href="https://feedly.com/i/subscription/feed/https://blog.anam.co/rss/" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="6.18" cy="17.82" r="2.18"/><path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/></svg>
+</a>
+    </div>
+</nav>
+    </div>
+</header>
+
+
+<main id="site-main" class="site-main outer">
+    <div class="inner">
+
+        <article class="post-full post tag-docker tag-ghost-tag tag-drupal7 tag-drupal tag-english ">
+
+            <header class="post-full-header">
+                <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime="2018-06-25">25 June 2018</time>
+                        <span class="date-divider">/</span> <a href="../tag/docker/index.html">docker</a>
+                </section>
+                <h1 class="post-full-title">Migrating My Blog from Drupal to Ghost</h1>
+            </header>
+
+            <figure class="post-full-image" style="background-image: url(https://images.unsplash.com/photo-1500989145603-8e7ef71d639e?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjExNzczfQ&amp;s=ecb03a017810c4ac4efad4475725773d)">
+            </figure>
+
+            <section class="post-full-content">
+                <div class="post-content">
+                    <p>I am a <a href="https://drupal.org/">Drupal</a> Fan. Most of the CMS related work I did in PHP involved Drupal. So when it was time to make my own blog back in 2013, I chose Drupal without having second thought. Although <a href="https://wordpress.org/">WordPress</a> was really popular and easier that time, I still went for Drupal. It was, in a sense, Like a tribute for me. I even kept the original "Powered by Drupal" footer.</p><p>This is how my blog used to look: </p><figure class="kg-image-card"><img src="../content/images/2018/06/Screen-Shot-2018-06-25-at-6.34.11-AM.png" class="kg-image"></figure><p>For the most part, It did what it was supposed to do. In fact, it did the job really well. I became busy to pay my bills, After every couple of month or more, I used to come to my blog, reset the password(because I keep forgetting it) and write an article, then forget about it. </p><p>This went on for quite some time, and one day a Facebook Friend of mine, Knocked me in messenger. He asked with my blog URL if it was my blog. I said yes it is! then what he did was surprising, and shocking. He sent me another URL, this time of a text file, hosted in <strong>My Freaking Server</strong> and when I followed the link, the text file contained: </p><pre><code>Dear brother, Your site has serious Vulnerability. That's how I could create this file. </code></pre><p>I was shocked, in shame and  felt really bad for myself. I also felt really thankful to that person. He said this bug was a very old one, but as I did not update Drupal core for the last three years, it was still there. Definitely my laziness and carelessness was to blame for it. </p><blockquote>I still thank god that it was spotted by a <strong>White Hat Hacker </strong></blockquote><p>I updated Drupal core and was saved that time. But I had a fear in my mind about it. I kept updating Drupal core every two month (Allthough I did not write any blog). But I was feeling that my 2013 blog was getting old, and updating was getting difficult.</p><h3 id="the-reasons-behind-the-migration-">The reasons behind the migration:</h3><ol><li>The blog was hosted in a shared PHP hosting, Although one of my closest friends own that hosting company, I always felt lack of control. And if I needed to change anything on the server, it was time consuming. I did not have shell access so I could not use <a href="https://github.com/drush-ops/drush">Drush</a> with Drupal. </li><li>To update Drupal core on that server, I had to backup the <code>sites</code> folder, delete everything, unzip the latest version, configure <code>settings.php</code> and then put back the sites folder. Obviously this process was not reliable. And there were always a chance for thousands of things to go wrong.</li><li>My blog started to look Old. The theme was from 2013. The theme was built with older HTML and CSS, and the design was old.</li><li>The blog was tough to scale. If I expected more load, I had to call the server administrator to increase resources (Already mentioned I was feeling lack of control)</li><li>I wanted to go pure markdown. I installed markdown filter for Drupal and could write posts in markdown. But I always craved for a better editor inside the blog itself.</li><li>My blog was using Drupal 7, a very old version in current days. At the time of writing this post Drupal 9 is already a thing. and Drupal 7 support is scheduled to end within a year.</li></ol><p>With all the above reasons, It was a matter of choosing another blogging application. I had a lot of choices. I seriously considered going for a hosted platform like wix or SquareSpace. Then what's the fun in that?</p><p>I had a crush on Ghost since the day it was released.I liked it a lot. <a href="https://blog.anam.co/ghost-just-a-blogging-platform-full-of-awesomeness/">I even wrote a blog post about it</a>. And if you go to the <a href="xhttps://blog.anam.co/docker-in-bangla/">previous post in my blog</a> (Which is in Bangla) I talked about my journey of learning Docker. I thought to myself, this could be a great Practice project! So I decided to create my blog with Ghost, inside a docker container.</p><h3 id="the-approach-i-took">The Approach I took</h3><p>There were some simple steps I had to take in order to get my ghost blog up and running. Here's what I did:</p><ol><li>Bought a droplet in <a href="https://m.do.co/c/259260c8b6f2">Digital Ocean</a> , Configured it with Ubuntu.</li><li>Installed <code>docker</code> in the droplet.</li><li>Created a folder for the ghost application, created a <code>docker-compose.yml</code> file in that folder, and created a folder <code>data</code> to persist data (did not use mysql, went with sqlite for the first version) and here's how my compose file looks like:</li></ol><pre><code>version: "3"
+
+services:
+    ghostapp:
+       image: ghost:2
+       ports:
+         - "2368:2368"
+       volumes:
+         - ./data:/var/lib/ghost/content
+       restart: always
+       environment:
+         - NODE_ENV=production
+         - url=https://blog.anam.co</code></pre><p>If you want to know more about docker compose. You can learn it from <a href="https://docs.docker.com/compose">Here</a> </p><p>Then I ran the command <code>docker-compose up -d</code> and the application started. Only thing left was to configure nginx to forward traffic to it. </p><p>So, I wrote a reverse-proxy configuration in nginx, that looks something like the following:</p><pre><code>server{
+   server_name blog.anam.co;
+   listen 80;
+   location /{
+	proxy_pass http://localhost:2368;
+	proxy_set_header Host $host;
+	proxy_set_header X-Real-Ip $remote_addr;
+	proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+   }
+}</code></pre><p>And then I needed to install SSL certificate. For that I used <a href="https://letsencrypt.org/">Let's encrypt's SSL</a> via their certbot (It's really simple I might write a blog post about it in the future)</p><p>And the last thing I did was pointing the domain <code>blog.anam.co</code> to the new server.</p><p>Then I manually migrated all the contents from the older server to the new one (did not automate or look for any tool as there were only a few articles)</p><h4 id="and-like-that-the-migration-was-complete-">And like that..The migration was complete. </h4><p></p><blockquote>If I share this post, you'll know that everything went well.</blockquote>
+                </div>
+            </section>
+            <section class="disqus-comments post-full-content">
+                <style>
+                    .disqus-comments.post-full-content::before {
+                        display: none;
+                    }
+            
+                    .disqus-comments.post-full-content::after {
+                        display: none;
+                    }
+                </style>
+            
+                <div id="disqus_thread"></div>
+                <script>
+
+                    /**
+                    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+                    var disqus_config = function () {
+                        //this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                        this.page.identifier = "ghost-5b3037442477490001b5edcc"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    };
+                    (function () { // DON'T EDIT BELOW THIS LINE
+                        var d = document, s = d.createElement('script');
+                        s.src = '../../anamsblog.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the
+                    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+                </noscript>
+            </section>
+
+            <footer class="post-full-footer">
+
+
+                    
+<section class="author-card">
+        <img class="author-profile-image" src="http://www.gravatar.com/avatar/768b02b94182c64b0cc4bbeedcca49f9?s=250&amp;d=mm&amp;r=x" alt="Anam Ahmed" />
+    <section class="author-card-content">
+        <h4 class="author-card-name"><a href="../author/anam/index.html">Anam Ahmed</a></h4>
+            <p>Read <a href="../author/anam/index.html">more posts</a> by this author.</p>
+    </section>
+</section>
+<div class="post-full-footer-right">
+    <a class="author-card-button" href="../author/anam/index.html">Read More</a>
+</div>
+
+
+            </footer>
+
+
+        </article>
+
+    </div>
+</main>
+
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+                <article class="read-next-card"
+                            style="background-image: url(../../casper.ghost.org/v1.0.0/images/blog-cover.jpg)"
+                >
+                    <header class="read-next-card-header">
+                        <small class="read-next-card-header-sitetitle">&mdash; Anam&#x27;s Blog &mdash;</small>
+                        <h3 class="read-next-card-header-title"><a href="../tag/docker/index.html">docker</a></h3>
+                    </header>
+                    <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
+</div>
+                    <div class="read-next-card-content">
+                        <ul>
+                            <li><a href="../easy-wordpress-development-with-docker/index.html">Easy WordPress Development with Docker</a></li>
+                            <li><a href="../upgrading-dockerized-ghost-to-ghost-v2/index.html">Upgrading Self-Hosted Dockerized Ghost Blog to Ghost V2</a></li>
+                            <li><a href="../vpn-in-10-minutes/index.html">How I created my own VPN server in 10 minutes</a></li>
+                        </ul>
+                    </div>
+                    <footer class="read-next-card-footer">
+                        <a href="../tag/docker/index.html">See all 6 posts →</a>
+                    </footer>
+                </article>
+
+                <article class="post-card post tag-linux tag-firewall tag-devops tag-english">
+        <a class="post-card-image-link" href="../an-uncomplicated-introduction-to-firewall-in-linux/index.html">
+            <div class="post-card-image" style="background-image: url(https://images.unsplash.com/photo-1516798600250-395dc1e37e17?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjExNzczfQ&amp;s=24a2b4bff96f90040dace36faf3ab631)"></div>
+        </a>
+    <div class="post-card-content">
+        <a class="post-card-content-link" href="../an-uncomplicated-introduction-to-firewall-in-linux/index.html">
+            <header class="post-card-header">
+                    <span class="post-card-tags">linux</span>
+                <h2 class="post-card-title">An uncomplicated introduction to Firewall in linux(UFW on Ubuntu)</h2>
+            </header>
+            <section class="post-card-excerpt">
+                <p>When I heard the name Firewall for computer network, I imagined it to be a protective layer that destroys anything harmful in the transport. Like a wall of actual fire (please don't judge</p>
+            </section>
+        </a>
+        <footer class="post-card-meta">
+
+            <ul class="author-list">
+                <li class="author-list-item">
+
+                    <div class="author-name-tooltip">
+                        Anam Ahmed
+                    </div>
+
+                        <a href="../author/anam/index.html" class="static-avatar"><img class="author-profile-image" src="http://www.gravatar.com/avatar/768b02b94182c64b0cc4bbeedcca49f9?s=250&amp;d=mm&amp;r=x" alt="Anam Ahmed" /></a>
+                </li>
+            </ul>
+
+            <span class="reading-time">3 min read</span>
+
+        </footer>
+    </div>
+</article>
+
+                <article class="post-card post tag-docker tag-linux tag-bangla-2">
+        <a class="post-card-image-link" href="../docker-in-bangla/index.html">
+            <div class="post-card-image" style="background-image: url(https://images.unsplash.com/photo-1476778642660-a2c55571cf0d?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjExNzczfQ&amp;s=3c8e2583e5bb2b6e1986b198308d96a7)"></div>
+        </a>
+    <div class="post-card-content">
+        <a class="post-card-content-link" href="../docker-in-bangla/index.html">
+            <header class="post-card-header">
+                    <span class="post-card-tags">docker</span>
+                <h2 class="post-card-title">আমার ডকার শেখা/ বাংলায় ডকার</h2>
+            </header>
+            <section class="post-card-excerpt">
+                <p>ডকার আমার অপছন্দের বস্তুর তালিকায় উপরের দিকে ছিলো। অপছন্দের কারন ম্যাকে ডকারের বাজে</p>
+            </section>
+        </a>
+        <footer class="post-card-meta">
+
+            <ul class="author-list">
+                <li class="author-list-item">
+
+                    <div class="author-name-tooltip">
+                        Anam Ahmed
+                    </div>
+
+                        <a href="../author/anam/index.html" class="static-avatar"><img class="author-profile-image" src="http://www.gravatar.com/avatar/768b02b94182c64b0cc4bbeedcca49f9?s=250&amp;d=mm&amp;r=x" alt="Anam Ahmed" /></a>
+                </li>
+            </ul>
+
+            <span class="reading-time">1 min read</span>
+
+        </footer>
+    </div>
+</article>
+
+        </div>
+    </div>
+</aside>
+
+<div class="floating-header">
+    <div class="floating-header-logo">
+        <a href="https://blog.anam.co/">
+                <img src="../content/images/2018/06/blogfav-1.png" alt="Anam&#x27;s Blog icon" />
+            <span>Anam&#x27;s Blog</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">Migrating My Blog from Drupal to Ghost</div>
+    <div class="floating-header-share">
+        <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
+</svg>
+</div>
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Migrating%20My%20Blog%20from%20Drupal%20to%20Ghost&amp;url=https://blog.anam.co/migrating-my-blog-from-drupal-to-ghost/"
+            onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+        </a>
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.anam.co/migrating-my-blog-from-drupal-to-ghost/"
+            onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+        </a>
+    </div>
+    <progress id="reading-progress" class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+
+
+
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="https://blog.anam.co/">Anam&#x27;s Blog</a> &copy; 2022</section>
+                <nav class="site-footer-nav">
+                    <a href="https://blog.anam.co/">Latest Posts</a>
+                    <a href="https://www.facebook.com/theanam" target="_blank" rel="noopener">Facebook</a>
+                    <a href="https://twitter.com/mranam" target="_blank" rel="noopener">Twitter</a>
+                    <a href="https://ghost.org/" target="_blank" rel="noopener">Ghost</a>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+
+    <script
+        src="../../code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="../assets/js/jquery.fitvids4124.js?v=cfe2113eef"></script>
+
+
+    <script>
+
+// NOTE: Scroll performance is poor in Safari
+// - this appears to be due to the events firing much more slowly in Safari.
+//   Dropping the scroll event and using only a raf loop results in smoother
+//   scrolling but continuous processing even when not scrolling
+$(document).ready(function () {
+    // Start fitVids
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    // End fitVids
+
+    var progressBar = document.querySelector('#reading-progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        // show/hide floating header
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+
+});
+</script>
+
+
+    
+
+</body>
+
+<!-- Mirrored from anam.co/migrating-my-blog-from-drupal-to-ghost/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 26 Jan 2022 09:53:44 GMT -->
+</html>
